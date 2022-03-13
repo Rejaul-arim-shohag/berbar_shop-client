@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 const TopNavBar = () => {
     return (
         <Fragment>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar className="sticky-top " collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home"><img src={logo}/></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
