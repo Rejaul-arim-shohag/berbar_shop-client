@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-primary-dark: #150303;
+    --color-primary: #FB0000;
+    --color-white: #fafafa;
+}
+
+/*...Normal...*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+/*...Site Navbar...*/
+
+.navbar{
+    background: var(--color-primary-dark) !important;
+}
+
+.nav-link{
+    transition: all .3s ease-out 0s;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--color-white) !important;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+.nav-link-active{
+    font-size: 16px;
+    transition: all .3s ease-out 0s;
+    color: var(--color-primary) !important;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif ;
+}
+.nav-link:hover{
+    transition: all .3s ease-out 0s;
+    color: var(--color-primary) !important;
+}
+
+/*...Site Navbar...*/
+.site-btn{
+    background: var(--color-primary);
+    font-family: 'Poppins', sans-serif ;
+    padding: 28px 48px;
+    color:var(--color-white) !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    border-radius: 0;
+    line-height: 1;
+    cursor: pointer;
+    -moz-user-select: none;
+    transition: all .3s ease-out 0s;
+    border: 0;
+}
+.site-btn:hover{
+    transition: all .3s ease-out 0s;
+    background: var(--color-white);
+    color:var(--color-primary-dark) !important;
+}
