@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import HeroSection from './components/HeroSaction/HeroSection';
+import Home from './pages/Home';
 function App() {
   return (
     <div className="">
-      <HeroSection/>
+      <Home />
     </div>
   );
 }
