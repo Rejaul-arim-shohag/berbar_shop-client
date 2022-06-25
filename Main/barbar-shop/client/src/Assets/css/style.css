@@ -12,6 +12,22 @@ body{
     font-size: 14px;
 }
 
+.section{
+    padding: 60px 80px 40px 80px;
+}
+.section-title{
+    font-size: 32px;
+    color: var( --color-primary-dark) !important;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+.section-image{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+
 
 /*...Site Navbar...*/
 .navbar{

@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-
+import  scissors from "../Assets/img/scissors.svg"
 class HomeHero extends Component {
     render() {
         return (
@@ -11,6 +11,7 @@ class HomeHero extends Component {
                                 <div className="row justify-content-center">
                                     <div className="col-md-10">
                                         <div className="home-hero-left">
+                                            <img src={scissors}/>
                                             <h1 className="home-hero-title  animated fadeInUp ">WE ARE THE <br/>LAST OF <br/>BREAD</h1>
                                             <h1 className="home-hero-subtitle  animated fadeInUp  mt-2">Achive Your Dream Style</h1>
                                             <button className="btn mt-2  animated fadeInUp  site-btn">Book Now</button>

@@ -7,7 +7,7 @@ class ServicesPage extends Component {
         return (
             <Fragment>
                 <TopNavBar/>
-                <Hero title="Services"/>
+                <Hero title="Speciality"/>
             </Fragment>
         );
     }
