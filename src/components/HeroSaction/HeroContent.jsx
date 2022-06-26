@@ -24,7 +24,7 @@ export default function HeroContent() {
             />
             <h3 className='fw-normal'>$ 1000</h3>
             <p className=' details'>Nullam suscipit id ante bibendum bibendum. Vivamus interdum gravida justo id venenatis. tempus velit sed, lobortis </p>
-            <button className='navBtn booking rounded-pill fw-bold py-2 w-md-75'>Book Now</button>
+            <button className='navBtn booking rounded-pill fw-bold py-2 w-100 w-auto'>Book Now</button>
           </div>
           <div className="img w-50">
             <img src="/images/HeroPhoto.png" alt="" height="100%" width="100%" className='img-fluid' />

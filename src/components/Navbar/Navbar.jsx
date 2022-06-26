@@ -72,14 +72,35 @@ export default function Navbar() {
                         <GiHamburgerMenu className='display-6' />
                     </Button>
                 </div>
-                <Offcanvas toggle={() => setToggle(prev => !prev)} isOpen={toggle}>
-                    <OffcanvasHeader toggle={() => setToggle(prev => !prev)}>
-                        Offcanvas
+                <Offcanvas toggle={() => setToggle(prev => !prev)} isOpen={toggle} className="" style={{background:"#03203C"}}>
+                    <OffcanvasHeader toggle={() => setToggle(prev => !prev)} >
+                        <div className="">
+                            <Link to="/" class="navbar-brand relative block">
+                                <img src="/images/logo.png" alt="" height="34" width="120" />
+                            </Link>
+                        </div>
                     </OffcanvasHeader>
                     <OffcanvasBody>
-                        <strong>
-                            This is the Offcanvas body.
-                        </strong>
+                        <div className=" d-md-block ">
+                            <ul className='vstack gap-2 text-uppercase justify-content-center align-items-center mt-1'>
+                                {
+                                    menu.map((item, index) => (
+                                        <li>
+                                            <NavLink
+                                                to={item.href}
+                                                style={({ isActive }) =>
+                                                    isActive ? activeStyle : undefined
+                                                }
+                                                className="text-decoration-none text-light btn btn-secondary"
+                                            >
+                                                {item.name}
+                                            </NavLink>
+                                        </li>
+                                    ))
+                                }
+
+                            </ul>
+                        </div>
                     </OffcanvasBody>
                 </Offcanvas>
             </div>

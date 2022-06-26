@@ -1,41 +1,41 @@
 .mainHero {
-    background-image: url("/public/images/HeroBackground.png");
-    height: 100vh;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-image: url("/public/images/HeroBackground.png");
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .burgerMenu:focus {
-    border: 0;
+  border: 0;
 }
 
 .navBtn {
-    background-color: #AB007D;
-    color: white;
-    border-radius: 8px;
-    transition: all 200ms ease-in-out;
-    border: none;
+  background-color: #ab007d;
+  color: white;
+  border-radius: 8px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  border: none;
 }
 
 .navBtn:hover {
-    background-color: white;
-    color: #758283;
-    border-radius: 8px;
+  background-color: white;
+  color: #758283;
+  border-radius: 8px;
 }
-
 
 .navBtn.booking {
-   border:1px solid transparent;
+  border: 1px solid transparent;
 }
+
 .navBtn.booking:hover {
-   border:.5px solid #758283;
+  border: 0.5px solid #758283;
 }
-
-
 
 .feature-card .details {
-    font-size: .8em;
-    color: #758283;
+  font-size: 0.8em;
+  color: #758283;
 }
+/*# sourceMappingURL=HeroSection.css.map */
