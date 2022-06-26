@@ -1,5 +1,4 @@
 import React from 'react'
-
 export default function HomePageLayout({children,title,des}) {
     return (
         <div className="container px-5 my-5">
@@ -7,9 +6,7 @@ export default function HomePageLayout({children,title,des}) {
                 <h3>{title}</h3>
                 <p className='text-muted '>{des}</p>
             </div>
-
             {children}
-           
         </div>
     )
 }
