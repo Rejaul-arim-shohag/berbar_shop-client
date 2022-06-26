@@ -38,4 +38,34 @@
   font-size: 0.8em;
   color: #758283;
 }
+
+.navItem {
+  color: #fff;
+}
+
+.navItem:hover {
+  color: #758283;
+}
+
+.sidebarItem {
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.sidebarItem a {
+  color: #fff;
+}
+
+.sidebarItem:hover {
+  background-color: #fff;
+}
+
+.sidebarItem:hover a, .sidebarItem:hover .navIcon {
+  color: #1f2121;
+}
+
+.sidebarItem .navIcon {
+  color: #fff;
+}
 /*# sourceMappingURL=HeroSection.css.map */

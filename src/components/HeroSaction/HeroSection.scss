@@ -37,8 +37,32 @@
     color: #758283;
 }
 
-// @include media-breakpoint-up(md) {
-//     .navBtn.booking {
-//         width: 75%;
-//     }
-// }
+.navItem{
+    color: #fff;
+
+}
+.navItem:hover{
+    color: #758283;
+
+}
+.sidebarItem{
+    cursor: pointer;
+    
+    a{
+        color: #fff;
+    }
+    transition: all 250ms ease-in-out;
+
+    &:hover{
+        background-color: #fff;
+        a,.navIcon{
+            color: #1f2121;
+        }
+    }
+
+    .navIcon{
+        color: #fff;
+        
+    }
+
+}

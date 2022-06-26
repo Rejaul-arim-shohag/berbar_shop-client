@@ -1,22 +1,26 @@
-import React, { useState } from 'react'
-import { Button, OffcanvasHeader, Offcanvas, OffcanvasBody } from 'reactstrap'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { Link, NavLink } from "react-router-dom";
+import { useState } from 'react'
+import { Offcanvas } from 'react-bootstrap'
+import { AiFillContacts, AiFillSetting, AiOutlineControl, AiOutlineHome, AiOutlineRight, AiOutlineTeam } from 'react-icons/ai'
+import { FiMessageSquare } from 'react-icons/fi'
+import { GiHamburgerMenu, GiMoneyStack } from 'react-icons/gi'
+import { Link, NavLink } from "react-router-dom"
 
 export default function Navbar() {
-    const [toggle, setToggle] = useState(false);
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const toggleShow = () => setShow((s) => !s);
     let activeStyle = {
 
     };
 
     const menu = [
-        { name: 'Home', href: '/', current: true },
-        { name: 'Service', href: '/service', current: true },
-        { name: 'Team', href: '/team', current: true },
-        { name: 'Price', href: '/price', current: true },
-        { name: 'Reviews', href: '/reviews', current: true },
-        { name: 'About', href: '/about', current: !true },
-        { name: 'Contact', href: '/contact', current: !true },
+        { name: 'Home', href: '/', icon: <AiOutlineHome />, current: true },
+        { name: 'Service', href: '/service', icon: <AiFillSetting />, current: true },
+        { name: 'Team', href: '/team', icon: <AiOutlineTeam />, current: true },
+        { name: 'Price', href: '/price', icon: <GiMoneyStack />, current: true },
+        { name: 'Reviews', href: '/reviews', icon: <FiMessageSquare />, current: true },
+        { name: 'About', href: '/about', icon: <AiOutlineControl />, current: !true },
+        { name: 'Contact', href: '/contact', icon: <AiFillContacts />, current: !true },
         // { name: 'Registration', href: '/registration', current: !true },
     ]
     return (
@@ -37,9 +41,9 @@ export default function Navbar() {
                                         <NavLink
                                             to={item.href}
                                             style={({ isActive }) =>
-                                                isActive ? activeStyle : undefined
+                                                isActive ? {} : {}
                                             }
-                                            className="text-decoration-none text-light"
+                                            className="text-decoration-none  navItem"
                                         >
                                             {item.name}
                                         </NavLink>
@@ -64,44 +68,46 @@ export default function Navbar() {
             <div className='position-relative d-md-none'>
                 {/* Mobile version */}
                 <div className="">
-                    <Button
+                    <button
                         outline
                         className='ms-auto shadow-none float-end text-light border-0 outline-0 bg-transparent burgerMenu'
-                        onClick={() => setToggle(prev => !prev)}
+                        onClick={toggleShow}
                     >
                         <GiHamburgerMenu className='display-6' />
-                    </Button>
+                    </button>
                 </div>
-                <Offcanvas toggle={() => setToggle(prev => !prev)} isOpen={toggle} className="" style={{background:"#03203C"}}>
-                    <OffcanvasHeader toggle={() => setToggle(prev => !prev)} >
+                <Offcanvas show={show} onHide={handleClose}  className="w-75" style={{ background: "#03203C" }}>
+                    <Offcanvas.Header closeButton closeVariant="white">
                         <div className="">
                             <Link to="/" class="navbar-brand relative block">
                                 <img src="/images/logo.png" alt="" height="34" width="120" />
                             </Link>
                         </div>
-                    </OffcanvasHeader>
-                    <OffcanvasBody>
+                    </Offcanvas.Header>
+                    <Offcanvas.Body>
                         <div className=" d-md-block ">
-                            <ul className='vstack gap-2 text-uppercase justify-content-center align-items-center mt-1'>
+                            <ul className='d-flex flex-column  text-uppercase justify-content-start align-items-start mt-1'>
                                 {
                                     menu.map((item, index) => (
-                                        <li>
+                                        <li className='py-3 px-3 border border-secondary my-2 w-100 d-block sidebarItem d-flex justify-content-between rounded-1' >
+                                            {/* {item.icon} */}
                                             <NavLink
                                                 to={item.href}
                                                 style={({ isActive }) =>
                                                     isActive ? activeStyle : undefined
                                                 }
-                                                className="text-decoration-none text-light btn btn-secondary"
+                                                className="text-decoration-none sideVa fw-bold  "
                                             >
-                                                {item.name}
+                                                <span className='fs-4'>{item.icon}</span> <span> {item.name}</span>
                                             </NavLink>
+                                            <AiOutlineRight className='navIcon fs-5' />
                                         </li>
                                     ))
                                 }
 
                             </ul>
                         </div>
-                    </OffcanvasBody>
+                    </Offcanvas.Body>
                 </Offcanvas>
             </div>
         </nav>
