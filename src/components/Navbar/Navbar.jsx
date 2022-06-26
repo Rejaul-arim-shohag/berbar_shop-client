@@ -27,9 +27,9 @@ export default function Navbar() {
         <nav className='d-flex justify-content-between align-items-center pt-1'>
 
             <div className="mt-1 mt-md-2 w-100">
-                <nav class="d-flex justify-content-between align-items">
+                <nav className="d-flex justify-content-between align-items">
                     <div className="">
-                        <Link to="/" class="navbar-brand relative block">
+                        <Link to="/" className="navbar-brand relative block">
                             <img src="/images/logo.png" alt="" height="34px" width="120" />
                         </Link>
                     </div>
@@ -37,7 +37,7 @@ export default function Navbar() {
                         <ul className='d-flex gap-3 text-uppercase justify-content-center align-items-center mt-1'>
                             {
                                 menu.map((item, index) => (
-                                    <li>
+                                    <li key={index}>
                                         <NavLink
                                             to={item.href}
                                             style={({ isActive }) =>
@@ -57,9 +57,9 @@ export default function Navbar() {
                         <button className='navBtn rounded-pill fw-bold py-2 px-5'>Sign Up</button>
                     </div>
                     {/* <div className="">
-                            <form class="d-flex d-md-none mt-3">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                                <button class="navBtn " type="submit">Search</button>
+                            <form className="d-flex d-md-none mt-3">
+                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                                <button className="navBtn " type="submit">Search</button>
                             </form>
                         </div> */}
 
@@ -69,7 +69,7 @@ export default function Navbar() {
                 {/* Mobile version */}
                 <div className="">
                     <button
-                        outline
+                        outline="false"
                         className='ms-auto shadow-none float-end text-light border-0 outline-0 bg-transparent burgerMenu'
                         onClick={toggleShow}
                     >
@@ -79,7 +79,7 @@ export default function Navbar() {
                 <Offcanvas show={show} onHide={handleClose}  className="w-75 offCanvasMenu" >
                     <Offcanvas.Header closeButton closeVariant="white">
                         <div className="">
-                            <Link to="/" class="navbar-brand relative block">
+                            <Link to="/" className="navbar-brand relative block">
                                 <img src="/images/logo.png" alt="" height="34" width="120" />
                             </Link>
                         </div>
@@ -89,7 +89,7 @@ export default function Navbar() {
                             <ul className='d-flex flex-column  text-uppercase justify-content-start align-items-start mt-1'>
                                 {
                                     menu.map((item, index) => (
-                                        <li className='py-3 px-3 border border-secondary my-2 w-100 d-block sidebarItem d-flex justify-content-between rounded-1' >
+                                        <li key={index} className='py-3 px-3 border border-secondary my-2 w-100 d-block sidebarItem d-flex justify-content-between rounded-1' >
                                             {/* {item.icon} */}
                                             <NavLink
                                                 to={item.href}

@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroSection from '../components/HeroSaction/HeroSection'
+import Models from '../components/Models/Models'
 import Services from '../components/Services/Services'
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div className=''>
         <HeroSection/>
         <Services/>
+        <Models/>
     </div>
   )
 }
