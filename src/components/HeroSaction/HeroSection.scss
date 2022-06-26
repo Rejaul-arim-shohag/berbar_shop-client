@@ -1,5 +1,5 @@
 .mainHero {
-    background-image: url("/public/images/HeroBackground.png");
+    background-image: url("./src/assets/img/HeroBackground.png");
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
@@ -7,11 +7,9 @@
     background-size: auto;
     
 }
-
 .burgerMenu:focus {
     border: 0;
 }
-
 .navBtn {
     background-color: #ab007d;
     color: white;

@@ -12,9 +12,7 @@ export default function HeroSection() {
                     <Navbar />
                     <HeroContent />
                 </div>
-
             </main>
-
         </section>
     )
 }
