@@ -76,7 +76,7 @@ export default function Navbar() {
                         <GiHamburgerMenu className='display-6' />
                     </button>
                 </div>
-                <Offcanvas show={show} onHide={handleClose}  className="w-75" style={{ background: "#03203C" }}>
+                <Offcanvas show={show} onHide={handleClose}  className="w-75 offCanvasMenu" >
                     <Offcanvas.Header closeButton closeVariant="white">
                         <div className="">
                             <Link to="/" class="navbar-brand relative block">

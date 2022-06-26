@@ -7,7 +7,7 @@ export default function HeroSection() {
     return (
         <section>
             <main className='mainHero'>
-                <div className=" container px-5">
+                <div className="container px-5 ">
                     <UpperNav />
                     <Navbar />
                     <HeroContent />

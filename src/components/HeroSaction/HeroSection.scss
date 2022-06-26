@@ -3,8 +3,9 @@
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: bottom;
+    background-size: auto;
+    
 }
 
 .burgerMenu:focus {
@@ -37,32 +38,36 @@
     color: #758283;
 }
 
-.navItem{
+.navItem {
     color: #fff;
-
 }
-.navItem:hover{
+.navItem:hover {
     color: #758283;
-
 }
-.sidebarItem{
+.sidebarItem {
     cursor: pointer;
-    
-    a{
+
+    a {
         color: #fff;
     }
     transition: all 250ms ease-in-out;
 
-    &:hover{
+    &:hover {
         background-color: #fff;
-        a,.navIcon{
+        a,
+        .navIcon {
             color: #1f2121;
         }
     }
 
-    .navIcon{
+    .navIcon {
         color: #fff;
-        
     }
-
+}
+.offCanvasMenu {
+    background: rgb(0, 1, 51);
+    background: -moz-linear-gradient(128deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    background: -webkit-linear-gradient(128deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    background: linear-gradient(128deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133",endColorstr="#9f0078",GradientType=1);
 }

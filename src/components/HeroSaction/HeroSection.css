@@ -3,8 +3,8 @@
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: bottom;
+  background-size: auto;
 }
 
 .burgerMenu:focus {
@@ -61,11 +61,18 @@
   background-color: #fff;
 }
 
-.sidebarItem:hover a, .sidebarItem:hover .navIcon {
+.sidebarItem:hover a,
+.sidebarItem:hover .navIcon {
   color: #1f2121;
 }
 
 .sidebarItem .navIcon {
   color: #fff;
+}
+
+.offCanvasMenu {
+  background: #000133;
+  background: linear-gradient(128deg, #000133 34%, #9f0078 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133",endColorstr="#9f0078",GradientType=1);
 }
 /*# sourceMappingURL=HeroSection.css.map */
