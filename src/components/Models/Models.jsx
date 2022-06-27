@@ -5,6 +5,7 @@ import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { BsFacebook, BsInstagram } from "react-icons/bs"
 import "./Models.css"
+import { motion } from "framer-motion"
 export default function Models() {
     const [modelPhotos, setModelPhotos] = useState();
     useEffect(() => {
@@ -19,11 +20,11 @@ export default function Models() {
                 slidesPerView={6}
                 className="mySwiper"
                 loop={true}
-                // autoplay={{
-                //     delay: 500,
-                //     disableOnInteraction: false,
-                //     pauseOnMouseEnter: true
-                // }}
+                autoplay={{
+                    delay: 500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                }}
                 modules={[Autoplay]}
             >
                 {
@@ -42,11 +43,13 @@ export default function Models() {
                                     </div>
                                 </div>
 
+
                             </SwiperSlide>
                         )
                     })
                 }
             </Swiper>
+
         </div>
     )
 }
