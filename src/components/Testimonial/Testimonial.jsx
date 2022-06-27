@@ -18,7 +18,7 @@ export default function Testimonial() {
         ).then(({ data }) => data)
     );
 
-    useEffect(() => setTestimonial(data?.results), [data])
+    useEffect(() => setTestimonial(data), [data])
 
     if (testimonial?.length === 0) {
         return <Loader isLoading={true} />
@@ -51,7 +51,7 @@ export default function Testimonial() {
         ]
     };
     return (
-        <div id="reviews">
+        <div>
             <div data-aos="fade-left">
                 <HomePageLayout>
                     <div className="d-flex justify-content-between flex-wrap gap-5">

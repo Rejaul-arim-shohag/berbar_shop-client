@@ -41,7 +41,7 @@ export default function Models() {
                     {
                         modelPhotos?.map((item, index) => {
                             return (
-                                <SwiperSlide>
+                                <SwiperSlide key={index}>
                                     <div className="h-100 w-100 modelCard position-relative">
                                         <div className="h-100 w-100 modelPhoto">
                                             <img src={item.picture.large} alt="" className='h-100 w-100' />
