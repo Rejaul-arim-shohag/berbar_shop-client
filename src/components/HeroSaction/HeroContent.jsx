@@ -12,7 +12,7 @@ export default function HeroContent() {
 
       </div>
       <div className="feature-card py-5">
-        <div className="content bg-light p-5 pb-0 d-flex " style={{ borderRadius: "20pt" }}>
+        <div className="content bg-light p-5 pb-md-0 d-flex " style={{ borderRadius: "20pt" }}>
           <div className="w-50 gap-2 d-flex flex-column">
             <h3 className=''>Hair Cut Service Name Here</h3>
             <StarRatings

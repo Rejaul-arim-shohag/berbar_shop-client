@@ -1,7 +1,7 @@
 import React from 'react'
 import HomePageLayout from '../Layout/HomePageLayout'
 import { Container, Row, Col } from "react-bootstrap"
-
+import "./Service.css"
 export default function Services() {
 
     const data = [
@@ -27,7 +27,7 @@ export default function Services() {
         }
     ]
     return (
-        <main>
+        <main className='serviceSection'>
             <HomePageLayout title="What We Can Do for You" des="Who are in extremely love with eco friendly system.">
                 <Container className="" fluid >
                     <Row>
