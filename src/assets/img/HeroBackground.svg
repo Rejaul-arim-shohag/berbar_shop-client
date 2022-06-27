@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1926.515" height="1080.227" viewBox="0 0 1926.515 1080.227">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.47" y1="0.33" x2="0" y2="0.937" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#000133"/>
+      <stop offset="1" stop-color="#ab007d"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_971" data-name="Group 971" transform="translate(3123.347 1881.227)">
+    <g id="Group_970" data-name="Group 970">
+      <path id="Path_4" data-name="Path 4" d="M0,957.809s450.424,179,696.353,0S989.062,809.633,1326.68,847.566,1791,841.639,1924.661,691.092c1.938-2.183,0-691.092,0-691.092H0Z" transform="translate(-3123 -1841.028)" fill="#4900c7" opacity="0.3"/>
+      <path id="Path_4-2" data-name="Path 4" d="M0,997.454s450.424,179.732,696.353,0,292.709-208.3,630.327-170.21S1791,857,1924.661,705.836c1.938-2.192,0-705.836,0-705.836H0Z" transform="translate(-3123 -1881)" fill="#000133" opacity="0.9"/>
+      <path id="Path_4-3" data-name="Path 4" d="M0,1000.1s450.424,179.78,696.353,0,292.709-258.359,630.327-220.26S1791,833.415,1924.661,682.21c1.938-2.193,0-682.21,0-682.21H0Z" transform="translate(-3123 -1881)" fill="url(#linear-gradient)"/>
+      <path id="Path_5" data-name="Path 5" d="M0,0S344.275,286.467,883.687,135.905" transform="translate(-3123 -1156.9)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1" stroke-dasharray="7" opacity="0.4"/>
+      <path id="Path_5-2" data-name="Path 5" d="M0,0S324.959,313.115,834.106,162.553s622.721,294.462,1091.524,0" transform="translate(-3123 -1090.28)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1" stroke-dasharray="7" opacity="0.4"/>
+      <path id="Path_6" data-name="Path 6" d="M0,0C113.3,237.642,276.964,369.24,491.921,399.552c322.223,45.438,467.411-120.595,615.841-67.636" transform="translate(-2304.762 -1881)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1" stroke-dasharray="7" opacity="0.4"/>
+      <path id="Path_7" data-name="Path 7" d="M0,0S259.249,508.979,802.151,469.007c287.859-46.845,365.786-111.18,498.517-69.787" transform="translate(-2498.764 -1881)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1" stroke-dasharray="7" opacity="0.4"/>
+    </g>
+  </g>
+</svg>

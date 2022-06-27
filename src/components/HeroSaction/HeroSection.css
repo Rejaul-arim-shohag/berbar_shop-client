@@ -1,5 +1,5 @@
 .mainHero {
-  background-image: url("/public/images/HeroBackground.png");
+  background-image: url("../../assets/img/HeroBackground.svg");
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
