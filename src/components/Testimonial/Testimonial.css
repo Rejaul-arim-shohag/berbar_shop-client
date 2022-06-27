@@ -1,0 +1,22 @@
+.testimonialNav {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.testimonialNav:hover {
+  background: #0D0D0D;
+  color: #CAD5E2;
+}
+
+.testimonialCardSlider .testimonialCard {
+  height: 16em !important;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.testimonialCardSlider .testimonialCard:hover {
+  cursor: pointer;
+  background-color: #242B2E;
+  color: white;
+}
+/*# sourceMappingURL=Testimonial.css.map */

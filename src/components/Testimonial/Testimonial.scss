@@ -1,0 +1,23 @@
+.testimonialNav{
+    transition: all 250ms ease-in-out;
+    &:hover{
+        background: #0D0D0D;
+        color:#CAD5E2 ;
+    }
+}
+.testimonialCardSlider{
+    //  width:50em!important;
+    .testimonialCard{
+        // width:20em!important;
+        height: 16em!important;
+    transition: all 200ms ease-in-out;
+        
+        &:hover{
+            cursor: pointer;
+            background-color: #242B2E;
+            color: white;
+        }
+        
+    }
+
+}
