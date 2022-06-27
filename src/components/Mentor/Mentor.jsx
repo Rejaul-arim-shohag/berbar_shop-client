@@ -18,7 +18,7 @@ export default function Mentor() {
                             <div className="h-100 w-100 text-center">
                                 <img src={item.picture.large} alt="" className='h-100 w-100'/>
                                 <h3 className='mt-4 fs-6'>{item.name.first + " " + item.name.last}</h3>
-                                <p>{item.email}</p>
+                                <p className='text-muted' style={{fontSize:"1.5ch"}}>{item.email}</p>
                             </div>
                         )
                     })

@@ -1,0 +1,20 @@
+.modelCard {
+    cursor: pointer;
+    .modelPhoto{
+
+    }
+    .modelOverlay {
+        position: absolute;
+        padding: 1em;
+        color: white;
+        height: 100%;
+        width:100%;
+        background: #000;
+        // z-index: 999;
+    }
+    &:hover {
+        img {
+            opacity: 0.5;
+        }
+    }
+}

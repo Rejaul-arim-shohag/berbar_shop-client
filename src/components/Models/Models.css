@@ -1,0 +1,17 @@
+.modelCard {
+  cursor: pointer;
+}
+
+.modelCard .modelOverlay {
+  position: absolute;
+  padding: 1em;
+  color: white;
+  height: 100%;
+  width: 100%;
+  background: #000;
+}
+
+.modelCard:hover img {
+  opacity: 0.5;
+}
+/*# sourceMappingURL=Models.css.map */
