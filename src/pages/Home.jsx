@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react'
+import Footer from '../components/Footer/Footer'
 import HeroSection from '../components/HeroSaction/HeroSection'
 import Mentor from '../components/Mentor/Mentor'
 import Models from '../components/Models/Models'
@@ -12,6 +13,7 @@ export default function Home() {
         <Models/>
         <Mentor/>
         <Testimonial/>
+        <Footer/>
     </Fragment>
   )
 }

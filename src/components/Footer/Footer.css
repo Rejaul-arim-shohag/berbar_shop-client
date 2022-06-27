@@ -1,0 +1,35 @@
+.footerSection {
+  background: #242B2E;
+  color: #CAD5E2;
+}
+
+.footerSection .footerCard {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  padding: 2em;
+  text-align: left;
+}
+
+.footerSection .footerCard p {
+  color: #758283;
+}
+
+.footerSection .footerCard .linkList {
+  padding-left: 0 !important;
+}
+
+.footerSection .footerCard .linkList a {
+  color: #758283;
+}
+
+.footerSection .footerCard .linkList a:hover {
+  color: #CAD5E2;
+}
+
+.footerSection .credit {
+  background: #0D0D0D;
+  text-align: center;
+  padding: 1em 0;
+}
+/*# sourceMappingURL=Footer.css.map */

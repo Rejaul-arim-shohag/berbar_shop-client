@@ -1,0 +1,27 @@
+.footerSection {
+    background: #242B2E;
+    color: #CAD5E2;
+    .footerCard {
+        flex: 1 1 0%;
+        padding: 2em;
+        text-align: left;
+        p{
+            color: #758283;
+
+        }
+        .linkList{
+            padding-left: 0 !important;
+            a{
+                color: #758283;
+                &:hover{
+                    color: #CAD5E2;
+                }
+            }
+        }
+    }
+    .credit{
+        background: #0D0D0D;
+        text-align: center;
+        padding: 1em 0;
+    }
+}
