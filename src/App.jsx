@@ -1,4 +1,4 @@
-import Home from './pages/Home';
+import Home from './pages/Home.page';
 import {Fragment} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import AOS from "aos";

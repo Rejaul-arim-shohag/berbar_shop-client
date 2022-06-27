@@ -24,7 +24,7 @@ export default function Navbar() {
         // { name: 'Registration', href: '/registration', current: !true },
     ]
     return (
-        <nav className='d-flex justify-content-between align-items-center pt-1'>
+        <nav className='d-flex justify-content-between align-items-center pt-1 relative'>
 
             <div className="mt-1 mt-md-2 w-100">
                 <nav className="d-flex justify-content-between align-items">

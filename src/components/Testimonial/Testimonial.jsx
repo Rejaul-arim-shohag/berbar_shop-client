@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
-import Slider from "react-slick";
 import axios from 'axios';
-import { HiOutlineChevronRight, HiOutlineChevronLeft } from "react-icons/hi"
-import { GoQuote } from "react-icons/go"
-import { Stack } from "react-bootstrap"
+import { useEffect, useRef, useState } from 'react';
+import { GoQuote } from "react-icons/go";
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
+import Slider from "react-slick";
 import HomePageLayout from '../Layout/HomePageLayout';
-import "./Testimonial.css"
+import "./Testimonial.css";
 export default function Testimonial() {
     const [testimonial, setTestimonial] = useState([]);
     const slider = useRef()

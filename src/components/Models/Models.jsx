@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { Autoplay } from "swiper";
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { BsFacebook, BsInstagram } from "react-icons/bs"
-import "./Models.css"
-import { motion } from "framer-motion"
+import "./Models.css";
 export default function Models() {
     const [modelPhotos, setModelPhotos] = useState();
     useEffect(() => {
