@@ -6,7 +6,7 @@ export default function HeroSection() {
     return (
         <section>
             
-            <main className='mainHero relative overflow-hidden'>
+            <main className='mainHero relative'>
                 <div className="container px-5" >
                     <UpperNav />
                     <Navbar />

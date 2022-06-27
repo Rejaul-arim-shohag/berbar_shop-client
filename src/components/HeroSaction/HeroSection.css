@@ -41,7 +41,7 @@
   border: 0.5px solid #758283;
 }
 
-.feature-card .details {
+.feature-card.details {
   font-size: 0.8em;
   color: #758283;
 }

@@ -11,8 +11,9 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: auto;
-    // font-family: "Redwing-Medium";
+    // font-family: "MyFont";
 }
+
 .burgerMenu:focus {
     border: 0;
 }
@@ -37,10 +38,17 @@
     border: 0.5px solid #758283;
 }
 
-.feature-card .details {
-    font-size: 0.8em;
-    color: #758283;
+.feature-card {
+    &.details {
+        font-size: 0.8em;
+        color: #758283;
+      
+    }
+ 
+   
+ 
 }
+
 
 .navItem {
     color: #fff;
