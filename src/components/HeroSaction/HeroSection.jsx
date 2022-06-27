@@ -12,12 +12,12 @@ export default function HeroSection() {
                     <UpperNav />
                     <Navbar />
                     <motion.div
-                        animate={{ scale: 2 }}
+                        animate={{ scale: 1.33 }}
                         // animate={{ x: [0, 100, 0] }}
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: .75 }}
                         layout 
                     >
-                        <div className="" style={{ transform: " scale(.5)" }}>
+                        <div className="" style={{ transform: " scale(.75)" }}>
                             <HeroContent />
                         </div>
 

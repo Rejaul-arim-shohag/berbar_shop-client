@@ -14,42 +14,45 @@ export default function Models() {
     }, [])
 
     return (
-        <div className='my-5'>
-            <Swiper
-                watchSlidesProgress={true}
-                slidesPerView={6}
-                className="mySwiper"
-                loop={true}
-                autoplay={{
-                    delay: 500,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true
-                }}
-                modules={[Autoplay]}
-            >
-                {
-                    modelPhotos?.map((item, index) => {
-                        return (
-                            <SwiperSlide>
-                                <div className="h-100 w-100 modelCard position-relative">
-                                    <div className="h-100 w-100 modelPhoto">
-                                        <img src={item.picture.large} alt="" className='h-100 w-100' />
+        <div data-aos="fade-right">
+            <div className='my-5'>
+                <Swiper
+                    watchSlidesProgress={true}
+                    slidesPerView={6}
+                    className="mySwiper"
+                    loop={true}
+                    autoplay={{
+                        delay: 500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    }}
+                    modules={[Autoplay]}
+                >
+                    {
+                        modelPhotos?.map((item, index) => {
+                            return (
+                                <SwiperSlide>
+                                    <div className="h-100 w-100 modelCard position-relative">
+                                        <div className="h-100 w-100 modelPhoto">
+                                            <img src={item.picture.large} alt="" className='h-100 w-100' />
+                                        </div>
+                                        <div className="modelOverlay ">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p>
+                                            <BsFacebook />
+                                            <BsInstagram className='ms-3' />
+
+                                        </div>
                                     </div>
-                                    <div className="modelOverlay ">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p>
-                                        <BsFacebook />
-                                        <BsInstagram className='ms-3' />
-
-                                    </div>
-                                </div>
 
 
-                            </SwiperSlide>
-                        )
-                    })
-                }
-            </Swiper>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                </Swiper>
 
+            </div>
         </div>
+
     )
 }

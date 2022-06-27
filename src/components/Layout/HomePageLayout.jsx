@@ -13,8 +13,8 @@ export default function HomePageLayout({ children, title, des }) {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: false }}
             >
+               {children}
 
-                {children}
 
             </motion.div>
 

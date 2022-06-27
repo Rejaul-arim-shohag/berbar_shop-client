@@ -11,7 +11,8 @@ export default function Footer() {
         { title: "Contact Us", href: "/" }
     ]
     return (
-        <div className='footerSection'>
+        <div data-aos="fade-up">
+              <div className='footerSection'>
             <HomePageLayout>
                 <div className="d-flex flex-column flex-md-row gap-3 justify-content-between " >
                     <div className="quickLink footerCard">
@@ -46,5 +47,7 @@ export default function Footer() {
                 <p>COPYRIGHT © 2022-2023 - ALL RIGHTS RESERVED. BY BARBER SHOP LTD</p>
             </div>
         </div>
+        </div>
+      
     )
 }

@@ -44,7 +44,8 @@ export default function Testimonial() {
     };
     return (
         <>
-            <HomePageLayout>
+        <div data-aos="fade-left">
+        <HomePageLayout>
                 <div className="d-flex justify-content-between flex-wrap gap-5">
                     <div className="col-md-2 col-12 text-center d-flex justify-content-center align-items-center">
                         <div className="">
@@ -84,6 +85,8 @@ export default function Testimonial() {
                     </div>
                 </div>
             </HomePageLayout>
+        </div>
+           
 
         </>
     );

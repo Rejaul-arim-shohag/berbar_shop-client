@@ -30,28 +30,32 @@ export default function Services() {
     return (
         <main className='serviceSection'>
 
-            <HomePageLayout title="What We Can Do for You" des="Who are in extremely love with eco friendly system.">
-                <Container className="" fluid >
-                    <Row>
-                        {
-                            data?.map((item, index) => (
-                                <Col className="" key={index} xs={12} md={6}>
-                                    <div className="d-flex gap-2 ">
-                                        <div className="">
-                                            <img src={item.src} alt="" width={80} height={80} />
+            <div data-aos="fade-up">
+                <HomePageLayout title="What We Can Do for You" des="Who are in extremely love with eco friendly system.">
+                    <Container className="" fluid >
+                        <Row>
+                            {
+                                data?.map((item, index) => (
+                                    <Col className="" key={index} xs={12} md={6}>
+                                        <div className="d-flex gap-2 ">
+                                            <div className="">
+                                                <img src={item.src} alt="" width={80} height={80} />
+                                            </div>
+                                            <div className="">
+                                                <h6 className='fw-bold'>{item.title}</h6>
+                                                <p className=' text-muted lh-lg ' style={{ textAlign: "justify", fontSize: ".7em" }}>{item.description}</p>
+                                            </div>
                                         </div>
-                                        <div className="">
-                                            <h6 className='fw-bold'>{item.title}</h6>
-                                            <p className=' text-muted lh-lg ' style={{ textAlign: "justify", fontSize: ".7em" }}>{item.description}</p>
-                                        </div>
-                                    </div>
-                                </Col>
-                            ))
-                        }
-                    </Row>
-                </Container>
+                                    </Col>
+                                ))
+                            }   
+                        </Row>
+                    </Container>
 
-            </HomePageLayout>
+                </HomePageLayout>
+            </div>
+
+
 
 
         </main>
