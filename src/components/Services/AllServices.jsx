@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer';
 import StarRatings from 'react-star-ratings';
 import { useQuery } from 'react-query';
 
-export default function Services() {
+export default function AllServices() {
     const [services, setServices] = useState([]);
     const { isLoading, error, data, isFetching } = useQuery("services", () =>
         axios.get(
@@ -28,7 +28,7 @@ export default function Services() {
                 <div className="">
                     <div data-aos="fade-up">
                         <Row xs={1} md={3} className="g-4">
-                            {services?.slice(0, 6).map((_, idx) => (
+                            {services?.map((_, idx) => (
                                 <Col key={idx}>
                                     <Card>
                                         <Card.Img variant="top" src={_.avatar} />
@@ -55,6 +55,7 @@ export default function Services() {
 
             </HomePageLayout>
 
+            <Footer />
         </>
     )
 }

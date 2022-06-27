@@ -11,7 +11,7 @@ export default function Footer() {
         { title: "Contact Us", href: "/" }
     ]
     return (
-        <div data-aos="fade-left" >
+        <div data-aos="fade-up"  data-aos-anchor-placement="center-bottom" >
             <div className='footerSection'>
                 <HomePageLayout>
                     <div className="d-flex flex-column flex-md-row gap-3 justify-content-between " >

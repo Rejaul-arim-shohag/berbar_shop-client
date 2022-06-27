@@ -5,12 +5,23 @@ import { Autoplay } from "swiper";
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "./Models.css";
+import { useQuery } from 'react-query';
+import Loader from '../../helper/Loading';
+
 export default function Models() {
     const [modelPhotos, setModelPhotos] = useState();
-    useEffect(() => {
-        axios('https://randomuser.me/api?results=12')
-            .then(({ data }) => setModelPhotos(data.results))
-    }, [])
+    const { isLoading, error, data, isFetching } = useQuery("models", () =>
+        axios.get(
+            "https://randomuser.me/api?results=12"
+        ).then(({ data }) => data)
+    );
+
+    useEffect(()=>setModelPhotos(data?.results),[data])
+
+    if(isLoading || isFetching){
+        return <Loader/>
+    }
+
 
     return (
         <div data-aos="fade-right">
