@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Redwing-Medium';
+  src: local("MyFont"), url("../../assets/fonts/Redwing-Medium.otf") format("otf");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+
 .mainHero {
   background-image: url("../../assets/img/HeroBackground.svg");
   height: 100vh;

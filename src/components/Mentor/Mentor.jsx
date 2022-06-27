@@ -15,9 +15,9 @@ export default function Mentor() {
 
     useEffect(() => setMentorPhotos(data), [data])
 
-    if (mentorPhotos?.length === 0) {
-        return <Loader isLoading={true} />
-    }
+    // if (mentorPhotos?.length === 0) {
+    //     return <Loader isLoading={true} />
+    // }
     return (
         <>
             <main>

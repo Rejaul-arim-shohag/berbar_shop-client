@@ -19,9 +19,9 @@ export default function Services() {
         setServices(data)
     }, [data])
 
-    if (services?.length === 0) {
-        return <Loader isLoading={true} />
-    }
+    // if (services?.length === 0) {
+    //     return <Loader isLoading={true} />
+    // }
     return (
         <>
             <HomePageLayout title="OUR TOP RATED SERVICES" des="We are the best in our field">

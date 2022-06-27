@@ -2,6 +2,16 @@
   cursor: pointer;
 }
 
+.modelCard .modelPhoto .overlayText {
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.modelCard .modelPhoto:hover .overlayText {
+  opacity: 1;
+}
+
 .modelCard .modelOverlay {
   position: absolute;
   padding: 1em;
@@ -12,6 +22,6 @@
 }
 
 .modelCard:hover img {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 /*# sourceMappingURL=Models.css.map */

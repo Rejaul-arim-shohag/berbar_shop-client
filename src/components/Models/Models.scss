@@ -1,7 +1,15 @@
 .modelCard {
     cursor: pointer;
     .modelPhoto{
-
+        .overlayText{
+           opacity: 0;
+           transition: all 200ms ease-in-out;
+        }
+        &:hover{
+            .overlayText{
+                opacity: 1;
+             }
+        }
     }
     .modelOverlay {
         position: absolute;
@@ -13,7 +21,7 @@
     }
     &:hover {
         img {
-            opacity: 0.5;
+            opacity: 0.3;
         }
     }
 }

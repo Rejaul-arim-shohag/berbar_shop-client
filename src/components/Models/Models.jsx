@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "./Models.css";
 import { useQuery } from 'react-query';
 import Loader from '../../helper/Loading';
+import { Card } from 'react-bootstrap';
 
 export default function Models() {
     const [modelPhotos, setModelPhotos] = useState();
@@ -16,11 +17,11 @@ export default function Models() {
         ).then(({ data }) => data)
     );
 
-    useEffect(()=>setModelPhotos(data?.results),[data])
+    useEffect(() => setModelPhotos(data?.results), [data])
 
-    if(isLoading || isFetching){
-        return <Loader/>
-    }
+    // if(isLoading || isFetching){
+    //     return <Loader/>
+    // }
 
 
     return (
@@ -44,7 +45,16 @@ export default function Models() {
                                 <SwiperSlide key={index}>
                                     <div className="h-100 w-100 modelCard position-relative">
                                         <div className="h-100 w-100 modelPhoto">
-                                            <img src={item.picture.large} alt="" className='h-100 w-100' />
+                                            <Card className="bg-dark text-white">
+                                                <Card.Img src={item.picture.large} alt="Card image" />
+                                                <Card.ImgOverlay className='overlayText d-none d-md-block'>
+                                                    <Card.Title>{item.name.first + " " + item.name.last}</Card.Title>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p>
+                                                    <BsFacebook />
+                                                    <BsInstagram className='ms-3' />
+                                                </Card.ImgOverlay>
+                                            </Card>
+                                            {/* <img src={item.picture.large} alt="" className='h-100 w-100' /> */}
                                         </div>
                                         <div className="modelOverlay ">
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p>

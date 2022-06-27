@@ -17,7 +17,7 @@ export default function Navbar() {
         { name: 'Home', href: '/', icon: <AiOutlineHome />, current: true },
         { name: 'Service', href: '/features/service', icon: <AiFillSetting />, current: true },
         { name: 'Team', href: '/features/team', icon: <AiOutlineTeam />, current: true },
-        // { name: 'Price', href: '/features/price', icon: <GiMoneyStack />, current: true },
+        { name: 'Blog', href: '/features/blog', icon: <GiMoneyStack />, current: true },
         // { name: 'Reviews', href: '#reviews', icon: <FiMessageSquare />, current: true },
         { name: 'About', href: '/features/about', icon: <AiOutlineControl />, current: !true },
         { name: 'Contact', href: '/features/contact', icon: <AiFillContacts />, current: !true },
@@ -89,14 +89,15 @@ export default function Navbar() {
                             <ul className='d-flex flex-column  text-uppercase justify-content-start align-items-start mt-1'>
                                 {
                                     menu.map((item, index) => (
-                                        <li key={index} className='py-3 px-3 border border-secondary my-2 w-100 d-block sidebarItem d-flex justify-content-between rounded-1' >
+                                        <li key={index} className='py-3 px-3 border border-secondary my-2 w-100 d-block sidebarItem d-flex justify-content-between align-items-center rounded-1' >
                                             {/* {item.icon} */}
                                             <NavLink
                                                 to={item.href}
                                                 style={({ isActive }) =>
                                                     isActive ? activeStyle : undefined
                                                 }
-                                                className="text-decoration-none sideVa fw-bold  "
+                                                className="text-decoration-none sideVa fw-bold block h-100 w-100"
+                                                onClick={()=>handleClose()}
                                             >
                                                 <span className='fs-4'>{item.icon}</span> <span> {item.name}</span>
                                             </NavLink>

@@ -2,12 +2,10 @@ import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import { GoQuote } from "react-icons/go";
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
+import { useQuery } from 'react-query';
 import Slider from "react-slick";
-import Loader from '../../helper/Loading';
-import Footer from '../Footer/Footer';
 import HomePageLayout from '../Layout/HomePageLayout';
 import "./Testimonial.css";
-import { useQuery } from 'react-query';
 
 export default function Testimonial() {
     const [testimonial, setTestimonial] = useState([]);
@@ -20,9 +18,9 @@ export default function Testimonial() {
 
     useEffect(() => setTestimonial(data), [data])
 
-    if (testimonial?.length === 0) {
-        return <Loader isLoading={true} />
-    }
+    // if (testimonial?.length === 0) {
+    //     return <Loader isLoading={true} />
+    // }
 
     const settings = {
         dots: false,
