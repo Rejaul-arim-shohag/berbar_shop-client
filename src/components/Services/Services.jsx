@@ -1,13 +1,16 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 import StarRatings from 'react-star-ratings';
 import HomePageLayout from '../Layout/HomePageLayout';
 import "./Services.css";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+import Slider from 'react-slick';
 export default function Services() {
     const [services, setServices] = useState([]);
+    const slider = useRef()
+
     const { isLoading, error, data, isFetching } = useQuery("services", () =>
         axios.get(
             "https://testimonialapi.toolcarton.com/api"
@@ -17,6 +20,32 @@ export default function Services() {
     useEffect(() => {
         setServices(data)
     }, [data])
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        initialSlide: 0,
+
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
 
     // if (services?.length === 0) {
     //     return <Loader isLoading={true} />
@@ -30,49 +59,60 @@ export default function Services() {
                             {services?.slice(0, 6).map((_, idx) => (
                                 <Col key={idx}>
                                     <Card>
-                                        {/* <Card.Img variant="top bg-image hover-zoom" src={_.avatar} /> */}
-                                        <div className="bg-image hover-zoom">
-                                           
-                                            <img src={_.avatar} alt="" className='h-100 w-100 ' />
-
-                                        </div>
-                                        {/* <Link class="d-block h-56 group serviceCard" href="/">
+                                        <Link class="d-block serviceCard" to="/">
                                             <div
-                                                class="relative flex items-end h-full transition bg-white border-4 border-black group-hover:-translate-x-2 group-hover:-translate-y-2 rounded-3xl group-hover:shadow-[8px_8px_0_0_#000] p-8"
+                                                class="position-relative  h-100  bg-light border-4 border-dark rounded"
                                             >
-                                                <div class="lg:group-hover:opacity-0 lg:group-hover:absolute">
-                                                    <span class="text-3xl sm:text-4xl" role="img" aria-hidden="true">📆</span>
-                                                    <p class="mt-4 text-xl font-bold sm:text-2xl">Datepicker Clear</p>
-                                                </div>
+                                                <img src={_.avatar} alt="" className='h-100 w-100 rounded' />
 
-                                                <div
-                                                    class="absolute opacity-0 lg:group-hover:opacity-100 lg:group-hover:relative"
-                                                >
-                                                    <p class="text-2xl font-bold">Datepicker Clear</p>
 
-                                                    <p class="mt-4 text-lg font-medium leading-relaxed">
-                                                        Datepicker input using Flatpickr with a button that clears the selected
-                                                        date.
-                                                    </p>
+                                                <div class="overlay p-md-3 p-2 pt-3 rounded" >
+                                                    <p className='text-dark fw-bold fs-md-4 '>$323</p>
+                                                    <p className='d-block text-dark'> Wavy hair</p>
+                                                    <StarRatings
+                                                        rating={_.rating}
+                                                        starRatedColor="#9f0078"
+                                                        starDimension='15px'
+                                                        numberOfStars={5}
+                                                        name='rating'
+                                                    />
                                                 </div>
                                             </div>
-                                        </Link> */}
-
-
-                                        <Card.Body>
-                                            <Card.Title>$323</Card.Title>
-                                            <span className='d-block'> Wavy hair</span>
-                                            <StarRatings
-                                                rating={_.rating}
-                                                starRatedColor=""
-                                                starDimension='15px'
-                                                numberOfStars={5}
-                                                name='rating'
-                                            />
-                                        </Card.Body>
+                                        </Link>
                                     </Card>
                                 </Col>
                             ))}
+
+                            {/* <Slider ref={c => (slider.current = c)} {...settings}>
+                                {services?.slice(0, 6).map((_, idx) => (
+                                    <Col key={idx}>
+                                        <Card>
+                                            <Link class="d-block serviceCard" to="/">
+                                                <div
+                                                    class="position-relative  h-100  bg-light border-4 border-dark rounded"
+                                                >
+                                                    <img src={_.avatar} alt="" className='h-100 w-100 rounded' />
+
+
+                                                    <div class="overlay p-md-3 p-2 pt-3 rounded" >
+                                                        <p className='text-dark fw-bold fs-md-4 '>$323</p>
+                                                        <p className='d-block text-dark'> Wavy hair</p>
+                                                        <StarRatings
+                                                            rating={_.rating}
+                                                            starRatedColor="#9f0078"
+                                                            starDimension='15px'
+                                                            numberOfStars={5}
+                                                            name='rating'
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </Card>
+                                    </Col>
+                                ))}
+
+                            </Slider> */}
+
                         </Row>
                     </div>
 

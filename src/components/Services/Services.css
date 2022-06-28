@@ -1,6 +1,44 @@
+.serviceCard {
+  height: 20rem;
+}
+
+.serviceCard div {
+  -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, -webkit-box-shadow, -webkit-transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, -webkit-box-shadow, -webkit-transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, -webkit-box-shadow, -webkit-transform;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.serviceCard div .overlay {
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  pointer-events: none;
+  background: rgba(250, 249, 249, 0.679);
+  line-height: .5ch;
+}
+
+.serviceCard div:hover {
+  -webkit-transform: translateX(-0.5rem);
+          transform: translateX(-0.5rem);
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+  -webkit-box-shadow: 8px 8px 0 0 #9f0078;
+          box-shadow: 8px 8px 0 0 #9f0078;
+}
+
+.serviceCard div:hover img {
+  opacity: 0.4;
+}
+
 @media only screen and (max-width: 600px) {
   .services .star-container {
     padding: 0 !important;
+  }
+  .serviceCard {
+    height: 10rem;
   }
 }
 /*# sourceMappingURL=Services.css.map */

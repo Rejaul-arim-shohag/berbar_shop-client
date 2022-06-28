@@ -6,7 +6,8 @@ import axios from 'axios'
 import Footer from '../Footer/Footer';
 import StarRatings from 'react-star-ratings';
 import { useQuery } from 'react-query';
-
+import "./Services.css";
+import { Link } from "react-router-dom"
 export default function AllServices() {
     const [services, setServices] = useState([]);
     const { isLoading, error, data, isFetching } = useQuery("services", () =>
@@ -31,24 +32,26 @@ export default function AllServices() {
                             {services?.map((_, idx) => (
                                 <Col key={idx}>
                                     <Card>
-                                        {/* <Card.Img variant="top " src={_.avatar} /> */}
-                                        <div className="bg-image hover-zoom">
-                                            <img src={_.avatar} alt="" className='h-100 w-100 ' />
+                                        <Link class="d-block serviceCard" to="/">
+                                            <div
+                                                class="position-relative  h-100  bg-light border-4 border-dark rounded"
+                                            >
+                                                <img src={_.avatar} alt="" className='h-100 w-100 rounded' />
 
-                                        </div>
-                                        <Card.Body>
-                                            <Card.Title>$323</Card.Title>
-                                            <Card.Text>
-                                                <p> Wavy hair</p>
-                                                <StarRatings
-                                                    rating={_.rating}
-                                                    starRatedColor=""
-                                                    starDimension='15px'
-                                                    numberOfStars={5}
-                                                    name='rating'
-                                                />
-                                            </Card.Text>
-                                        </Card.Body>
+
+                                                <div class="overlay p-md-3 p-2 pt-3 rounded" >
+                                                    <p className='text-dark fw-bold fs-md-4 '>$323</p>
+                                                    <p className='d-block text-dark'> Wavy hair</p>
+                                                    <StarRatings
+                                                        rating={_.rating}
+                                                        starRatedColor="#9f0078"
+                                                        starDimension='15px'
+                                                        numberOfStars={5}
+                                                        name='rating'
+                                                    />
+                                                </div>
+                                            </div>
+                                        </Link>
                                     </Card>
                                 </Col>
                             ))}
