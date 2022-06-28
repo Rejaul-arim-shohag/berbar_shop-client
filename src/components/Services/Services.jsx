@@ -59,33 +59,6 @@ export default function Services() {
                 <div className="services">
                     <div data-aos="fade-up">
                         <Row xs={12} md={12} className="g-2 g-md-4 serviceCardSlider">
-                            {/* {services?.slice(0, 6).map((_, idx) => (
-                                <Col key={idx}>
-                                    <Card>
-                                        <Link class="d-block serviceCard" to="/">
-                                            <div
-                                                class="position-relative  h-100  bg-light border-4 border-dark rounded"
-                                            >
-                                                <img src={_.avatar} alt="" className='h-100 w-100 rounded' />
-
-
-                                                <div class="overlay p-md-3 p-2 pt-3 rounded" >
-                                                    <p className='text-dark fw-bold fs-md-4 '>$323</p>
-                                                    <p className='d-block text-dark'> Wavy hair</p>
-                                                    <StarRatings
-                                                        rating={_.rating}
-                                                        starRatedColor="#9f0078"
-                                                        starDimension='15px'
-                                                        numberOfStars={5}
-                                                        name='rating'
-                                                    />
-                                                </div>
-                                            </div>
-                                        </Link>
-                                    </Card>
-                                </Col>
-                            ))} */}
-
                             <Slider ref={c => (slider.current = c)} {...settings}>
                                 {services?.map((_, idx) => (
                                     <Col key={idx} className="p-3">
