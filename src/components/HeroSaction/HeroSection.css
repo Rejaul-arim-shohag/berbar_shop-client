@@ -23,4 +23,16 @@
   font-size: 0.8em;
   color: #758283;
 }
+
+@media only screen and (max-width: 600px) {
+  .details {
+    font-size: .8rem;
+  }
+  .feature-card .heroContent h3 {
+    font-size: 1em;
+  }
+  .feature-card .heroContent .star-container {
+    padding: 0 !important;
+  }
+}
 /*# sourceMappingURL=HeroSection.css.map */

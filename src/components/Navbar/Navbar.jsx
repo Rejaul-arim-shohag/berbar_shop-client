@@ -12,7 +12,6 @@ export default function Navbar() {
     const [isScroll, setIsScroll] = useState(false);
     const scrollPosition = useScrollPosition()
 
-    console.log('scrollPosition',scrollPosition);
 
 
     const handleClose = () => setShow(false);

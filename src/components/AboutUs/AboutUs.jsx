@@ -35,14 +35,18 @@ export default function AboutUs() {
                         <Row>
                             {
                                 data?.map((item, index) => (
-                                    <Col className="" key={index} xs={12} md={6}>
+                                    <Col className="" key={index} xs={6} md={6}>
                                         <div className="d-flex gap-2 ">
-                                            <div className="">
+                                            <div className="d-none d-md-block">
                                                 <img src={item.src} alt="" width={80} height={80} />
                                             </div>
-                                            <div className="">
-                                                <h6 className='fw-bold'>{item.title}</h6>
-                                                <p className=' text-muted lh-lg ' style={{ textAlign: "justify", fontSize: ".7em" }}>{item.description}</p>
+                                            <div className="about_us">
+                                                <div className="d-flex">
+                                                    <img src={item.src} alt="" className="d-block d-md-none" width={40} height={40} />
+                                                    <h6 className='fw-bold '>{item.title}</h6>
+                                                </div>
+
+                                                <p className=' text-muted lh-md-lg ' style={{ textAlign: "justify", fontSize: ".7em" }}>{item.description}</p>
                                             </div>
                                         </div>
                                     </Col>

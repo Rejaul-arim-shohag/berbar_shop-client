@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=Services.css.map */
+@media only screen and (max-width: 600px) {
+  .services .star-container {
+    padding: 0 !important;
+  }
+}
+/*# sourceMappingURL=Services.css.map */

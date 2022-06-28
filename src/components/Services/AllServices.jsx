@@ -31,7 +31,11 @@ export default function AllServices() {
                             {services?.map((_, idx) => (
                                 <Col key={idx}>
                                     <Card>
-                                        <Card.Img variant="top" src={_.avatar} />
+                                        {/* <Card.Img variant="top " src={_.avatar} /> */}
+                                        <div className="bg-image hover-zoom">
+                                            <img src={_.avatar} alt="" className='h-100 w-100 ' />
+
+                                        </div>
                                         <Card.Body>
                                             <Card.Title>$323</Card.Title>
                                             <Card.Text>
