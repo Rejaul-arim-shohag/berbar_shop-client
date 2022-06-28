@@ -26,7 +26,7 @@ export default function Mentor() {
                         {
                             mentorPhotos?.slice(0, 4)?.map((item, index) => {
                                 return (
-                                    <div className="h-100 w-100 text-center">
+                                    <div className="h-100 w-100 text-center" key={index}>
                                         <div className="bg-image hover-zoom">
                                             <img src={item.avatar} alt="" className='h-100 w-100 ' />
 

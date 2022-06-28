@@ -1,0 +1,70 @@
+.navBar {
+  background: #000133;
+  background: radial-gradient(circle, #000133 34%, #9f0078 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133",endColorstr="#9f0078",GradientType=1);
+}
+
+.burgerMenu:focus {
+  border: 0;
+}
+
+.navBtn {
+  background-color: #ab007d;
+  color: white;
+  border-radius: 8px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  border: none;
+}
+
+.navBtn:hover {
+  background-color: white;
+  color: #758283;
+  border-radius: 8px;
+}
+
+.navBtn.booking {
+  border: 1px solid transparent;
+}
+
+.navBtn.booking:hover {
+  border: 0.5px solid #758283;
+}
+
+.navItem {
+  color: #fff;
+}
+
+.navItem:hover {
+  color: #758283;
+}
+
+.sidebarItem {
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.sidebarItem a {
+  color: #fff;
+}
+
+.sidebarItem:hover {
+  background-color: #fff;
+}
+
+.sidebarItem:hover a,
+.sidebarItem:hover .navIcon {
+  color: #1f2121;
+}
+
+.sidebarItem .navIcon {
+  color: #fff;
+}
+
+.offCanvasMenu {
+  background: #000133;
+  background: linear-gradient(128deg, #000133 34%, #9f0078 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133",endColorstr="#9f0078",GradientType=1);
+}
+/*# sourceMappingURL=Navbar.css.map */

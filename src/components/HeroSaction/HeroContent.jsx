@@ -4,11 +4,11 @@ import StarRatings from 'react-star-ratings'
 export default function HeroContent() {
 
   return (
-    <main className='d-flex flex-column flex-md-row '>
+    <main className='d-flex flex-column flex-md-row'>
       <div className="barber-title text-light d-flex justify-content-center py-5 align-items-start flex-column gap-4">
         <h2 className='display-5 w-75 text-uppercase fw-bold'>HairStyle is a  Must try Fashion  for all Occasion</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed </p>
-        <button className='appointment-btn btn btn-outline-light py-2 px-4 fw-bold'>Book Appointment</button>
+        <button className='appointment-btn btn btn-outline-light rounded-pill py-2 px-4 fw-bold '>Book Appointment</button>
 
       </div>
       <div className="feature-card py-5 ">

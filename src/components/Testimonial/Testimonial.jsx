@@ -49,7 +49,7 @@ export default function Testimonial() {
         ]
     };
     return (
-        <div>
+        <main className='testimonialMain'>
             <div data-aos="fade-left">
                 <HomePageLayout>
                     <div className="d-flex justify-content-between flex-wrap gap-5">
@@ -68,7 +68,7 @@ export default function Testimonial() {
                                 {
                                     testimonial?.map((item, index) => {
                                         return (
-                                            <div className="p-1 w-100">
+                                            <div className="p-1 w-100" key={index}>
                                                 <div key={index} className="card  testimonialCard border-start border-top h-100" >
                                                     <div className="card-body h-100 ">
                                                         <div className="header">
@@ -94,6 +94,6 @@ export default function Testimonial() {
             </div>
 
             {/* <Footer /> */}
-        </div>
+        </main>
     );
 }

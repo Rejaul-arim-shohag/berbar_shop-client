@@ -25,7 +25,7 @@ export default function Models() {
 
 
     return (
-        <div data-aos="fade-right">
+        <div data-aos="fade-right  ">
             <div className='my-5'>
                 <Swiper
                     watchSlidesProgress={true}

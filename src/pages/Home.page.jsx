@@ -9,7 +9,7 @@ import Testimonial from '../components/Testimonial/Testimonial'
 
 export default function Home() {
   return (
-    <div className='overflow-hidden'>
+    <div className=''>
       <HeroSection />
       <AboutUs />
       <Services />

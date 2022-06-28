@@ -28,6 +28,7 @@ export default function AboutUs() {
     return (
         <main className='serviceSection'>
 
+
             <div data-aos="fade-up">
                 <HomePageLayout title="What We Can Do for You" des="Who are in extremely love with eco friendly system.">
                     <Container className="" fluid >
@@ -51,6 +52,7 @@ export default function AboutUs() {
                     </Container>
 
                 </HomePageLayout>
+
             </div>
 
 

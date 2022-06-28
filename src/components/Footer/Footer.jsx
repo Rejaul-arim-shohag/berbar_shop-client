@@ -12,11 +12,11 @@ export default function Footer() {
     ]
     return (
         <div data-aos="fade-up"  data-aos-anchor-placement="center-bottom" >
-            <div className='footerSection'>
+            <footer className='footerSection'>
                 <HomePageLayout>
-                    <div className="d-flex flex-column flex-md-row gap-3 justify-content-between " >
+                    <div className="d-md-flex flex-column flex-md-row gap-3 justify-content-between d-none" >
                         <div className="quickLink footerCard">
-                            <h3>Quick Link</h3>
+                            <h3 className=''>Quick Link</h3>
                             <ul className='linkList'>
                                 {
                                     quickLink.map((item, index) => (
@@ -28,8 +28,7 @@ export default function Footer() {
 
                         </div>
                         <div className="contactUs footerCard">
-                            <h3>Quick Link</h3>
-
+                            <h3>Address</h3>
                             <p>Address- Plot# 1671, Nandipara, Trimuhoni Bridge, Rampura-Staff Quarter Rd, Dhaka-1214.</p>
                             <p>WhatsApp- 01977165675</p>
                             <p>Mail- contact@topgear.com.bd</p>
@@ -47,7 +46,7 @@ export default function Footer() {
                 <div className="credit">
                     <p>COPYRIGHT © 2022-2023 - ALL RIGHTS RESERVED. BY BARBER SHOP LTD</p>
                 </div>
-            </div>
+            </footer>
         </div>
 
     )

@@ -1,17 +1,27 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Offcanvas } from 'react-bootstrap'
 import { AiFillContacts, AiFillSetting, AiOutlineControl, AiOutlineHome, AiOutlineRight, AiOutlineTeam } from 'react-icons/ai'
 import { FiMessageSquare } from 'react-icons/fi'
 import { GiHamburgerMenu, GiMoneyStack } from 'react-icons/gi'
 import { Link, NavLink } from "react-router-dom"
-
+import "./Navbar.css"
+import 'animate.css';
+import useScrollPosition from '../../hooks/useScrollPosition'
 export default function Navbar() {
     const [show, setShow] = useState(false);
+    const [isScroll, setIsScroll] = useState(false);
+    const scrollPosition = useScrollPosition()
+
+    console.log('scrollPosition',scrollPosition);
+
+
     const handleClose = () => setShow(false);
     const toggleShow = () => setShow((s) => !s);
     let activeStyle = {
 
     };
+
+  
 
     const menu = [
         { name: 'Home', href: '/', icon: <AiOutlineHome />, current: true },
@@ -24,10 +34,10 @@ export default function Navbar() {
         // { name: 'Registration', href: '/registration', current: !true },
     ]
     return (
-        <nav className='d-flex justify-content-between align-items-center pt-1 relative'>
+        <nav className={`d-flex justify-content-between align-items-center pt-1  ${scrollPosition > 0 ? "bg-dark navBar fixed-top px-3 py-2 animate__animated animate__fadeInDown":""}`}>
 
-            <div className="mt-1 mt-md-2 w-100">
-                <nav className="d-flex justify-content-between align-items">
+            <div className="mt-1 mt-md-2 w-100 ">
+                <nav className="d-flex justify-content-between align-items ">
                     <div className="">
                         <Link to="/" className="navbar-brand relative block">
                             <img src="/images/logo.png" alt="" height="34px" width="120" />
