@@ -1,3 +1,13 @@
+.testimonialNav {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.testimonialNav:hover {
+  background: #0d0d0d;
+  color: #cad5e2;
+}
+
 .serviceCard {
   height: 20rem;
 }

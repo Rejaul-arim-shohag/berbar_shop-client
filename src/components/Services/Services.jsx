@@ -7,6 +7,8 @@ import HomePageLayout from '../Layout/HomePageLayout';
 import "./Services.css";
 import { Link } from "react-router-dom"
 import Slider from 'react-slick';
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
+
 export default function Services() {
     const [services, setServices] = useState([]);
     const slider = useRef()
@@ -24,9 +26,10 @@ export default function Services() {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 6,
-        slidesToScroll: 6,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         initialSlide: 0,
+
 
         responsive: [
             {
@@ -55,8 +58,8 @@ export default function Services() {
             <HomePageLayout title="OUR TOP RATED SERVICES" des="We are the best in our field">
                 <div className="services">
                     <div data-aos="fade-up">
-                        <Row xs={2} md={3} className="g-2 g-md-4">
-                            {services?.slice(0, 6).map((_, idx) => (
+                        <Row xs={12} md={12} className="g-2 g-md-4 serviceCardSlider">
+                            {/* {services?.slice(0, 6).map((_, idx) => (
                                 <Col key={idx}>
                                     <Card>
                                         <Link class="d-block serviceCard" to="/">
@@ -81,11 +84,11 @@ export default function Services() {
                                         </Link>
                                     </Card>
                                 </Col>
-                            ))}
+                            ))} */}
 
-                            {/* <Slider ref={c => (slider.current = c)} {...settings}>
-                                {services?.slice(0, 6).map((_, idx) => (
-                                    <Col key={idx}>
+                            <Slider ref={c => (slider.current = c)} {...settings}>
+                                {services?.map((_, idx) => (
+                                    <Col key={idx} className="p-3">
                                         <Card>
                                             <Link class="d-block serviceCard" to="/">
                                                 <div
@@ -111,9 +114,13 @@ export default function Services() {
                                     </Col>
                                 ))}
 
-                            </Slider> */}
+                            </Slider>
 
                         </Row>
+                        <div className=" mt-3 d-flex gap-3 justify-content-center">
+                            <button onClick={() => slider.current.slickPrev()} className='testimonialNav rounded-pill px-4 py-1 border-0'> <HiOutlineChevronLeft className='m-2' /></button>
+                            <button onClick={() => slider.current.slickNext()} className='testimonialNav rounded-pill px-4 py-1  border-0'> <HiOutlineChevronRight className='m-2' /></button>
+                        </div>
                     </div>
 
                 </div>

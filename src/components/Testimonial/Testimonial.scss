@@ -1,24 +1,22 @@
-.testimonialNav{
+.testimonialNav {
     transition: all 250ms ease-in-out;
-    &:hover{
-        background: #0D0D0D;
-        color:#CAD5E2 ;
+    &:hover {
+        background: #0d0d0d;
+        color: #cad5e2;
     }
 }
-.testimonialCardSlider{
-    .testimonialCard{
-        height: 16em!important;
-    transition: all 200ms ease-in-out;
-        
-        &:hover{
+.testimonialCardSlider {
+    .testimonialCard {
+        height: 16em !important;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
             cursor: pointer;
-            background-color: #242B2E;
+            background-color: #242b2e;
             color: white;
         }
-        
     }
-
 }
-.testimonialMain{
+.testimonialMain {
     overflow-x: hidden;
 }

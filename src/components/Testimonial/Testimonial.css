@@ -4,8 +4,8 @@
 }
 
 .testimonialNav:hover {
-  background: #0D0D0D;
-  color: #CAD5E2;
+  background: #0d0d0d;
+  color: #cad5e2;
 }
 
 .testimonialCardSlider .testimonialCard {
@@ -16,7 +16,7 @@
 
 .testimonialCardSlider .testimonialCard:hover {
   cursor: pointer;
-  background-color: #242B2E;
+  background-color: #242b2e;
   color: white;
 }
 
