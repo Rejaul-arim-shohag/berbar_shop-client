@@ -25,7 +25,7 @@ function App() {
               <Route path='team' element={<AllMentor />} />
               <Route path='blog' element={<ComingSoon />} />
               <Route path='reviews' element={< Testimonial />} />
-              <Route path='about' element={<AboutUs />} />
+              <Route path='about' element={<AboutUs routingAbout/>} />
               <Route path='contact' element={<ComingSoon />} />
               <Route path='*' index element={<NotFound />} />
             </Route>

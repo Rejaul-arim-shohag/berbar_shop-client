@@ -25,9 +25,9 @@ export default function AllServices() {
     return (
         <>
             <HomePageLayout title="OUR TOP RATED SERVICES" des="We are the best in our field">
-                <div className="">
+                <div className="services">
                     <div data-aos="fade-up">
-                        <Row xs={1} md={3} className="g-4">
+                        <Row xs={2} md={3} className="g-md-4 g-2">
                             {services?.map((_, idx) => (
                                 <Col key={idx}>
                                     <Card>

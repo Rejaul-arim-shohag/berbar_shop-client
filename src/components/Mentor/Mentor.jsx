@@ -22,11 +22,11 @@ export default function Mentor() {
         <>
             <main>
                 <HomePageLayout title="Experienced mentor team" des="We give our best service to every customer">
-                    <div className="d-flex gap-3 flex-column flex-md-row">
+                    <div className="d-flex gap-3">
                         {
                             mentorPhotos?.slice(0, 4)?.map((item, index) => {
                                 return (
-                                    <div className="h-100 w-100 text-center" key={index}>
+                                    <div className="h-50 h-md-100 w-50 w-md-100 text-center" key={index}>
                                         <div className="bg-image hover-zoom">
                                             <img src={item.avatar} alt="" className='h-100 w-100 ' />
 

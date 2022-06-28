@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap"
 import HomePageLayout from '../Layout/HomePageLayout'
 import "./AboutUs.css"
-export default function AboutUs() {
+export default function AboutUs({routingAbout}) {
 
     const data = [
         {
@@ -26,7 +26,7 @@ export default function AboutUs() {
         }
     ]
     return (
-        <main className='serviceSection'>
+        <main className={`${routingAbout ? '' : 'serviceSection'}`}>
 
 
             <div data-aos="fade-up">

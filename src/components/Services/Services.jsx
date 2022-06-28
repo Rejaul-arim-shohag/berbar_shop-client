@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { Row, Col, Card } from 'react-bootstrap'
-import Loader from '../../helper/Loading';
-import HomePageLayout from '../Layout/HomePageLayout'
-import axios from 'axios'
-import Footer from '../Footer/Footer';
-import StarRatings from 'react-star-ratings';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { Card, Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
-import "./Services.css"
+import StarRatings from 'react-star-ratings';
+import HomePageLayout from '../Layout/HomePageLayout';
+import "./Services.css";
+import {Link} from "react-router-dom"
 export default function Services() {
     const [services, setServices] = useState([]);
     const { isLoading, error, data, isFetching } = useQuery("services", () =>
@@ -33,21 +32,43 @@ export default function Services() {
                                     <Card>
                                         {/* <Card.Img variant="top bg-image hover-zoom" src={_.avatar} /> */}
                                         <div className="bg-image hover-zoom">
+                                           
                                             <img src={_.avatar} alt="" className='h-100 w-100 ' />
 
                                         </div>
+                                        {/* <Link class="d-block h-56 group serviceCard" href="/">
+                                            <div
+                                                class="relative flex items-end h-full transition bg-white border-4 border-black group-hover:-translate-x-2 group-hover:-translate-y-2 rounded-3xl group-hover:shadow-[8px_8px_0_0_#000] p-8"
+                                            >
+                                                <div class="lg:group-hover:opacity-0 lg:group-hover:absolute">
+                                                    <span class="text-3xl sm:text-4xl" role="img" aria-hidden="true">📆</span>
+                                                    <p class="mt-4 text-xl font-bold sm:text-2xl">Datepicker Clear</p>
+                                                </div>
+
+                                                <div
+                                                    class="absolute opacity-0 lg:group-hover:opacity-100 lg:group-hover:relative"
+                                                >
+                                                    <p class="text-2xl font-bold">Datepicker Clear</p>
+
+                                                    <p class="mt-4 text-lg font-medium leading-relaxed">
+                                                        Datepicker input using Flatpickr with a button that clears the selected
+                                                        date.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </Link> */}
+
+
                                         <Card.Body>
                                             <Card.Title>$323</Card.Title>
-                                            <Card.Text>
-                                                <p> Wavy hair</p>
-                                                <StarRatings
-                                                    rating={_.rating}
-                                                    starRatedColor=""
-                                                    starDimension='15px'
-                                                    numberOfStars={5}
-                                                    name='rating'
-                                                />
-                                            </Card.Text>
+                                            <span className='d-block'> Wavy hair</span>
+                                            <StarRatings
+                                                rating={_.rating}
+                                                starRatedColor=""
+                                                starDimension='15px'
+                                                numberOfStars={5}
+                                                name='rating'
+                                            />
                                         </Card.Body>
                                     </Card>
                                 </Col>
@@ -56,6 +77,7 @@ export default function Services() {
                     </div>
 
                 </div>
+
 
             </HomePageLayout>
 

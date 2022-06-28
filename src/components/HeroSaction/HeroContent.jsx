@@ -28,7 +28,7 @@ export default function HeroContent() {
               <div className="d-none d-md-block">
                 <h3 className='fw-normal'>$ 1000</h3>
                 <p className=' details'>Nullam suscipit id ante bibendum bibendum. Vivamus interdum gravida justo id venenatis. tempus velit sed, lobortis </p>
-                <button className='navBtn booking rounded-pill fw-bold py-2 '>Book Now</button>
+                <button className='navBtn booking rounded-pill fw-bold py-2 px-5 '>Book Now</button>
               </div>
 
             </div>
