@@ -1,8 +1,14 @@
+import { useEffect } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import HomePageLayout from '../Layout/HomePageLayout'
 import AllMentor from "../Mentor/AllMentor"
+import Testimonial from "../Testimonial/Testimonial"
 import "./AboutUs.css"
-export default function AboutUs({routingAbout}) {
+export default function AboutUs({ routingAbout }) {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+
+    }, [])
 
     const data = [
         {
@@ -60,7 +66,8 @@ export default function AboutUs({routingAbout}) {
 
 
             </div>
-            {routingAbout ? <AllMentor/> : <></>}
+            {routingAbout ? <Testimonial /> : <></>}
+            {routingAbout ? <AllMentor /> : <></>}
 
 
 

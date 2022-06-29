@@ -7,8 +7,8 @@ export default function Footer() {
         { title: "Privacy Policy", href: "/" },
         { title: "Terms & Conditions", href: "/" },
         { title: "Refund Policy", href: "/" },
-        { title: "About Us", href: "/" },
-        { title: "Contact Us", href: "/" }
+        { title: "About Us", href: "/features/about" },
+        { title: "Contact Us", href: "/features/contact" }
     ]
     return (
         <div data-aos="fade-up"  data-aos-anchor-placement="center-bottom" >

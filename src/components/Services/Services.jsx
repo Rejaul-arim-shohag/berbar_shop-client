@@ -19,6 +19,7 @@ export default function Services() {
         ).then(({ data }) => data)
     );
 
+
     useEffect(() => {
         setServices(data)
     }, [data])
@@ -63,14 +64,14 @@ export default function Services() {
                                 {services?.map((_, idx) => (
                                     <Col key={idx} className="p-3">
                                         <Card>
-                                            <Link class="d-block serviceCard" to="/">
+                                            <Link className="d-block serviceCard" to={`/features/booking/${_.id}`}>
                                                 <div
-                                                    class="position-relative  h-100  bg-light border-4 border-dark rounded"
+                                                    className="position-relative  h-100  bg-light border-4 border-dark rounded"
                                                 >
                                                     <img src={_.avatar} alt="" className='h-100 w-100 rounded' />
 
 
-                                                    <div class="overlayText p-md-3 p-2 pt-3 rounded" >
+                                                    <div className="overlayText p-md-3 p-2 pt-3 rounded" >
                                                         <p className='text-dark fw-bold fs-md-4 '>$300 - $500</p>
                                                         <p className='d-block text-dark'> Wavy hair</p>
                                                         <StarRatings

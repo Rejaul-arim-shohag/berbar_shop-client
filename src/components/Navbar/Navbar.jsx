@@ -25,9 +25,7 @@ export default function Navbar() {
     const menu = [
         { name: 'Home', href: '/', icon: <AiOutlineHome />, current: true },
         { name: 'Service', href: '/features/service', icon: <AiFillSetting />, current: true },
-        // { name: 'Team', href: '/features/team', icon: <AiOutlineTeam />, current: true },
         { name: 'Gallery', href: '/features/gallery', icon: <GiMoneyStack />, current: true },
-        // { name: 'Reviews', href: '#reviews', icon: <FiMessageSquare />, current: true },
         { name: 'About', href: '/features/about', icon: <AiOutlineControl />, current: !true },
         { name: 'Contact', href: '/features/contact', icon: <AiFillContacts />, current: !true },
         // { name: 'Registration', href: '/registration', current: !true },

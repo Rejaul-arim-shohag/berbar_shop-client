@@ -9,6 +9,7 @@ import AllMentor from './components/Mentor/AllMentor';
 import Models from "./components/Models/Models";
 import AllServices from './components/Services/AllServices';
 import Testimonial from './components/Testimonial/Testimonial';
+import BookingPage from "./pages/Booking.page";
 import ComingSoon from './pages/ComingSoon.page';
 import Features from './pages/Features.page';
 import Home from './pages/Home.page';
@@ -22,8 +23,10 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
+            {/* <Route path="/booking/:styleId" element={<BookingPage />} /> */}
             <Route path='/features' element={<Features />}>
               <Route path='service' element={<AllServices />} />
+              <Route path='booking/:styleId' element={<BookingPage />} />
               <Route path='gallery' element={<Models />} />
               <Route path='reviews' element={< Testimonial />} />
               <Route path='about' element={<AboutUs routingAbout/>} />

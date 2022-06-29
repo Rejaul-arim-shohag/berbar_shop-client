@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Contact.css'
+import * as mdb from 'mdb-ui-kit';
+import Footer from '../Footer/Footer';
+
 export default function Contact() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+
+    }, [])
     return (
         <section className=" relative">
             <div className=" contactInformation d-flex px-5 py-3 ">
@@ -14,44 +21,49 @@ export default function Contact() {
                         <div className="email">
                             <h2 className="">EMAIL</h2>
                             <a href='/' className="">example@email.com</a>
-                            <h2 className=" mt-4">PHONE</h2>
+
+                        </div>
+                        <div className="phone">
+                            <h2 className=" ">PHONE</h2>
                             <p className="">123-456-7890</p>
                         </div>
                     </div>
                 </div>
                 <div className="contactForm ">
+                    <div className="text-center mb-5">
+                        <h3 className=''>Write Us</h3>
+                        <p className='text-muted text-uppercase layoutDes'>Exited to hear from you!</p>
+                        <hr class="divider-horizontal-blurry " />
+                    </div>
                     <form>
                         {/* <!-- Name input --> */}
                         <div className="form-outline mb-4">
-                            <input type="text" id="form4Example1" className="form-control border" />
+                            <input required type="text" id="form4Example1" className="form-control border" />
                             <label className="form-label" for="form4Example1">Name</label>
                         </div>
 
                         {/* <!-- Email input --> */}
                         <div className="form-outline mb-4">
-                            <input type="email" id="form4Example2" className="form-control border" />
+                            <input required type="email" id="form4Example2" className="form-control border" />
                             <label className="form-label" for="form4Example2">Email address</label>
                         </div>
 
                         {/* <!-- Message input --> */}
                         <div className="form-outline mb-4">
-                            <textarea className="form-control border" id="form4Example3" rows="4"></textarea>
+                            <textarea required className="form-control border" id="form4Example3" rows="4"></textarea>
                             <label className="form-label" for="form4Example3">Message</label>
                         </div>
 
-                        {/* <!-- Checkbox --> */}
-                        <div className="form-check d-flex justify-content-center mb-4">
-                            <input className="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
-                            <label className="form-check-label" for="form4Example4">
-                                Send me a copy of this message
-                            </label>
-                        </div>
+
 
                         {/* <!-- Submit button --> */}
-                        <button type="submit" className="btn btn-primary btn-block mb-4">Send</button>
+                        <button type="submit" className="btn  btn-block mb-4 text-light" style={{ background: "#9f0078" }}>Send</button>
                     </form>
                 </div>
             </div>
+
+            <Footer />
+
         </section>
     )
 }
