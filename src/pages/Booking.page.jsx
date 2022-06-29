@@ -1,7 +1,27 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
+import Booking from '../components/Booking/Booking';
+import Footer from '../components/Footer/Footer';
+import UpperNav from '../components/HeroSaction/UpperNav';
+import HomePageLayout from '../components/Layout/HomePageLayout';
+import Navbar from '../components/Navbar/Navbar';
 
 export default function BookingPage() {
+  const { styleId } = useParams();
+
   return (
-    <div>BookingPage</div>
+    <>
+      <div className="features">
+        <div className=" container px-5 pb-5">
+          <UpperNav />
+          <Navbar />
+        </div>
+      </div>
+      <HomePageLayout title="Set a appointment" des="Best place to get a beautiful haircut">
+        <Booking />
+      </HomePageLayout>
+      <Footer />
+
+    </>
   )
 }

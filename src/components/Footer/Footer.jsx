@@ -4,9 +4,9 @@ import HomePageLayout from '../Layout/HomePageLayout'
 import './Footer.css'
 export default function Footer() {
     const quickLink = [
-        { title: "Privacy Policy", href: "/" },
-        { title: "Terms & Conditions", href: "/" },
-        { title: "Refund Policy", href: "/" },
+        { title: "Privacy Policy", href: "/utilities/privacy" },
+        { title: "Terms & Conditions", href: "/utilities/termsConditions" },
+        { title: "Refund Policy", href: "/utilities/refund" },
         { title: "About Us", href: "/features/about" },
         { title: "Contact Us", href: "/features/contact" }
     ]

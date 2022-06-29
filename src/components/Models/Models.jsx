@@ -50,7 +50,7 @@ export default function Models() {
                                                 {/* <Card.Img src={item.picture.large} alt="Card image" /> */}
                                                 <img
                                                     src={item.avatar}
-                                                    class="img-fluid  shadow-2-strong"
+                                                    className="img-fluid  shadow-2-strong"
                                                     alt="Hollywood Sign on The Hill"
                                                 />
                                                 <Card.ImgOverlay className='overlayText d-none d-md-block'>

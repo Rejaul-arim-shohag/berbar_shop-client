@@ -33,7 +33,7 @@ export default function Mentor() {
                                                 {/* <img src={item.avatar} alt="" className='h-100 w-100 ' /> */}
                                                 <img
                                                     src={item.avatar}
-                                                    class=" shadow-2-strong "
+                                                    className=" shadow-2-strong "
                                                     alt="Mentor team"
                                                 />
 

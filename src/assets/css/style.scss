@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+.features {
+    background: rgb(0, 1, 51);
+    background: -moz-linear-gradient(128deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    background: -webkit-linear-gradient(128deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    background: linear-gradient(128deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133", endColorstr="#9f0078", GradientType=1);
+}
+
+.comingSoon {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background: rgb(0, 1, 51);
+    background: -moz-linear-gradient(297deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    background: -webkit-linear-gradient(297deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    background: linear-gradient(297deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133", endColorstr="#9f0078", GradientType=1);
+
+}
+
+
+
+
+
+// @import "bootstrap/scss/bootstrap.scss";

@@ -5,6 +5,8 @@ export default function HomePageLayout({ children, title, des }) {
             <div className="text-center mb-5">
                 <h3 className='text-uppercase'>{title}</h3>
                 <p className='text-muted text-uppercase layoutDes'>{des}</p>
+                <hr className="divider-horizontal-blurry " />
+
             </div>
          
             {children}
