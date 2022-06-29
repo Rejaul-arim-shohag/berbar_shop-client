@@ -51,23 +51,23 @@ export default function Models() {
                                                 <img
                                                     src={item.avatar}
                                                     className="img-fluid  shadow-2-strong"
-                                                    alt="Hollywood Sign on The Hill"
+                                                    alt="Models"
                                                 />
                                                 <Card.ImgOverlay className='overlayText d-none d-md-block'>
                                                     <Card.Title>{item.name}</Card.Title>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p>
+                                                    <p  style={{ fontSize: ".7em" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p>
                                                     <BsFacebook />
                                                     <BsInstagram className='ms-3' />
                                                 </Card.ImgOverlay>
                                             </Card>
                                             {/* <img src={item.picture.large} alt="" className='h-100 w-100' /> */}
                                         </div>
-                                        <div className="modelOverlay ">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p>
+                                        {/* <div className="modelOverlay ">
+                                            <p  style={{ fontSize: ".7em" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p>
                                             <BsFacebook />
                                             <BsInstagram className='ms-3' />
 
-                                        </div>
+                                        </div> */}
                                     </div>
 
 

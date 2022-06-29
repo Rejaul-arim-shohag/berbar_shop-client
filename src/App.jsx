@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import '../node_modules/aos/dist/aos.css';
 import AboutUs from './components/AboutUs/AboutUs';
 import Contact from "./components/Contact/Contact";
+import Gallery from "./components/Gellary/Gellary";
 import AllMentor from './components/Mentor/AllMentor';
 import Models from "./components/Models/Models";
 import AllServices from './components/Services/AllServices';
@@ -30,7 +31,7 @@ function App() {
             <Route path="booking/:styleId" element={<BookingPage />} />
             <Route path='features' element={<Features />}>
               <Route path='service' element={<AllServices />} />
-              <Route path='gallery' element={<Models />} />
+              <Route path='gallery' element={<Gallery />} />
               <Route path='reviews' element={< Testimonial />} />
               <Route path='about' element={<AboutUs routingAbout />} />
               <Route path='contact' element={<Contact />} />
