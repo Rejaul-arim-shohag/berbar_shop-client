@@ -60,7 +60,6 @@ export default function AboutUs({routingAbout}) {
 
 
             </div>
-            {routingAbout ? <AllMentor/> : <></>}
 
 
 

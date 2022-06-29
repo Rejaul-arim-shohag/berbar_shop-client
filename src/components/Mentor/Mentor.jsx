@@ -1,8 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 import HomePageLayout from '../Layout/HomePageLayout';
-
+import "./mentor.css"
 export default function Mentor() {
     const [mentorPhotos, setMentorPhotos] = useState([]);
 
@@ -21,29 +22,34 @@ export default function Mentor() {
         <>
             <main>
                 <HomePageLayout title="Experienced mentor team" des="We give our best service to every customer">
-                    <div className="d-flex gap-3">
+                    <Row className=" " xs={2} md={4}>
                         {
                             mentorPhotos?.slice(0, 4)?.map((item, index) => {
                                 return (
-                                    <div className="h-50 h-md-100 w-50 w-md-100 text-center" key={index}>
-                                        <div className="bg-image hover-zoom">
-                                            {/* <img src={item.avatar} alt="" className='h-100 w-100 ' /> */}
-                                            <img
-                                                src={item.avatar}
-                                                class="img-fluid rounded-4 shadow-2-strong img-thumbnail"
-                                                alt="Hollywood Sign on The Hill"
-                                            />
+                                    <Col className=" " key={index}>
 
+                                        <div className=" text-center mentorCard">
+                                            <div className="bg-image hover-zoom mentorImg ">
+                                                {/* <img src={item.avatar} alt="" className='h-100 w-100 ' /> */}
+                                                <img
+                                                    src={item.avatar}
+                                                    class=" shadow-2-strong "
+                                                    alt="Mentor team"
+                                                />
+
+                                            </div>
+                                            <div className="mentorText">
+                                                <h3 className='mt-md-4 mentorName'>{item.name}</h3>
+                                                <p className='text-light' style={{ fontSize: "1.5ch" }}>{item.designation}</p>
+                                            </div>
                                         </div>
-                                        <h3 className='mt-4 fs-6'>{item.name}</h3>
-                                        <p className='text-muted' style={{ fontSize: "1.5ch" }}>{item.designation}</p>
-                                    </div>
+                                    </Col>
                                 )
                             })
 
                         }
 
-                    </div>
+                    </Row>
 
 
                 </HomePageLayout>

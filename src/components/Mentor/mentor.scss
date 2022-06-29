@@ -1,3 +1,37 @@
-@media only screen and (max-width: 600px) {
-   
+.mentorCard {
+  .mentorText {
+    background: #9f0078;
+    // background: rgb(0, 1, 51);
+    // background: -moz-linear-gradient(142deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    // background: -webkit-linear-gradient(142deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    // background: linear-gradient(142deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133",endColorstr="#9f0078",GradientType=1);
+    color: #fff;
+    padding: 1em 0em !important;
+    border-end-end-radius: 8pt;
   }
+  .mentorImg img{
+    border-top-left-radius: 8pt;
+    width: 100%!important;
+  }
+
+  border-radius: 8pt;
+
+  box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+  .mentorName {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mentorCard {
+    .mentorText {
+      // padding: 1em 1em !important;
+      // padding: auto 1em !important;
+      margin-bottom: 1em;
+    }
+
+    .mentorName {
+      font-size: 0.8em;
+    }
+  }
+}
