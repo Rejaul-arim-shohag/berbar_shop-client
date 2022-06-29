@@ -68,15 +68,16 @@ export default function Testimonial() {
                                 {
                                     testimonial?.map((item, index) => {
                                         return (
-                                            <div className="p-1 w-100" key={index}>
+                                            <div className="p-1 w-100 " key={index}>
                                                 <div key={index} className="card  testimonialCard border-start border-top h-100" >
-                                                    <div className="card-body h-100 ">
+                                                    <div className="card-body h-100 d-flex flex-column justify-content-between">
                                                         <div className="header">
                                                             <GoQuote className='display-7 text-muted' />
                                                             <p className='testimonialMessage' style={{ fontSize: "1.3ch" }}>{item.message}</p>
                                                         </div>
                                                         <div className="d-flex align-items-center justify-content-center gap-3 card-text">
-                                                            <img src={item.avatar} alt="" height={50} width={50} className="rounded-circle" />
+                                                            
+                                                            <img src={item.avatar} alt="" height={50} width={50} className="rounded-circle " />
                                                             <h5>{item.name}</h5>
                                                         </div>
                                                     </div>

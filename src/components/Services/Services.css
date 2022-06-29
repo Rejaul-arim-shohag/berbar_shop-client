@@ -21,13 +21,22 @@
           transition-duration: 300ms;
 }
 
-.serviceCard div .overlay {
+.serviceCard div .overlayText {
   opacity: 1;
   position: absolute;
   bottom: 0;
   pointer-events: none;
   background: rgba(250, 249, 249, 0.679);
   line-height: .5ch;
+}
+
+.serviceCard div .overlayButton {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .serviceCard div:hover {
@@ -43,6 +52,10 @@
   opacity: 0.4;
 }
 
+.serviceCard div:hover .overlayButton {
+  opacity: 1;
+}
+
 @media only screen and (max-width: 600px) {
   .services .star-container {
     padding: 0 !important;
@@ -51,4 +64,4 @@
     height: 10rem;
   }
 }
-/*# sourceMappingURL=Services.css.map */
+/*# sourceMappingURL=services.css.map */

@@ -11,7 +11,7 @@
     div {
         transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
         transition-duration: 300ms;
-        .overlay {
+        .overlayText {
             opacity: 1;
             position: absolute;
             bottom: 0;
@@ -19,12 +19,22 @@
             background: rgba(250, 249, 249, 0.679);
             line-height: .5ch;
         }
+        .overlayButton{
+            position:absolute;
+            inset: 50% auto auto 50%;
+            transform: translate(-50% ,-50%);
+            opacity: 0;
+            pointer-events: none;
+        }
         &:hover {
             transform: translateX(-0.5rem);
             transform: translateY(-0.5rem);
             box-shadow: 8px 8px 0 0 #9f0078;
             img {
                 opacity: 0.4;
+            }
+            .overlayButton{
+                opacity: 1;
             }
             // .overlay{
             //     opacity: 1;

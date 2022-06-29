@@ -13,11 +13,11 @@ export default function Models() {
     const [modelPhotos, setModelPhotos] = useState();
     const { isLoading, error, data, isFetching } = useQuery("models", () =>
         axios.get(
-            "https://randomuser.me/api?results=12"
+            "https://testimonialapi.toolcarton.com/api"
         ).then(({ data }) => data)
     );
 
-    useEffect(() => setModelPhotos(data?.results), [data])
+    useEffect(() => setModelPhotos(data), [data])
 
     // if(isLoading || isFetching){
     //     return <Loader/>
@@ -46,9 +46,14 @@ export default function Models() {
                                     <div className="h-100 w-100 modelCard position-relative">
                                         <div className="h-100 w-100 modelPhoto">
                                             <Card className="bg-dark text-white">
-                                                <Card.Img src={item.picture.large} alt="Card image" />
+                                                {/* <Card.Img src={item.picture.large} alt="Card image" /> */}
+                                                <img
+                                                    src={item.avatar}
+                                                    class="img-fluid  shadow-2-strong"
+                                                    alt="Hollywood Sign on The Hill"
+                                                />
                                                 <Card.ImgOverlay className='overlayText d-none d-md-block'>
-                                                    <Card.Title>{item.name.first + " " + item.name.last}</Card.Title>
+                                                    <Card.Title>{item.name}</Card.Title>
                                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p>
                                                     <BsFacebook />
                                                     <BsInstagram className='ms-3' />

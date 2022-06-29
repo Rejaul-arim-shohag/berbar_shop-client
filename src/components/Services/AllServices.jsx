@@ -30,7 +30,7 @@ export default function AllServices() {
                     <div data-aos="fade-up">
                         <Row xs={2} md={3} className="g-md-4 g-2">
                             {services?.map((_, idx) => (
-                                <Col key={idx}>
+                                <Col key={idx} className="p-3">
                                     <Card>
                                         <Link class="d-block serviceCard" to="/">
                                             <div
@@ -39,8 +39,8 @@ export default function AllServices() {
                                                 <img src={_.avatar} alt="" className='h-100 w-100 rounded' />
 
 
-                                                <div class="overlay p-md-3 p-2 pt-3 rounded" >
-                                                    <p className='text-dark fw-bold fs-md-4 '>$323</p>
+                                                <div class="overlayText p-md-3 p-2 pt-3 rounded" >
+                                                    <p className='text-dark fw-bold fs-md-4 '>$300 - $500</p>
                                                     <p className='d-block text-dark'> Wavy hair</p>
                                                     <StarRatings
                                                         rating={_.rating}
@@ -50,10 +50,14 @@ export default function AllServices() {
                                                         name='rating'
                                                     />
                                                 </div>
+                                                <div className="overlayButton">
+                                                    <button className='navBtn booking rounded-pill fw-bold py-2 px-5 '>Book Now</button>
+
+                                                </div>
                                             </div>
                                         </Link>
                                     </Card>
-                                </Col>
+                                </Col> 
                             ))}
                         </Row>
                     </div>

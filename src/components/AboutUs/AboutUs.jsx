@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap"
 import HomePageLayout from '../Layout/HomePageLayout'
+import AllMentor from "../Mentor/AllMentor"
 import "./AboutUs.css"
 export default function AboutUs({routingAbout}) {
 
@@ -57,7 +58,9 @@ export default function AboutUs({routingAbout}) {
 
                 </HomePageLayout>
 
+
             </div>
+            <AllMentor/>
 
 
 

@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
-import Loader from '../../helper/Loading';
 import HomePageLayout from '../Layout/HomePageLayout';
 
 export default function Mentor() {
@@ -28,7 +27,12 @@ export default function Mentor() {
                                 return (
                                     <div className="h-50 h-md-100 w-50 w-md-100 text-center" key={index}>
                                         <div className="bg-image hover-zoom">
-                                            <img src={item.avatar} alt="" className='h-100 w-100 ' />
+                                            {/* <img src={item.avatar} alt="" className='h-100 w-100 ' /> */}
+                                            <img
+                                                src={item.avatar}
+                                                class="img-fluid rounded-4 shadow-2-strong img-thumbnail"
+                                                alt="Hollywood Sign on The Hill"
+                                            />
 
                                         </div>
                                         <h3 className='mt-4 fs-6'>{item.name}</h3>
