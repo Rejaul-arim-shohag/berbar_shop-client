@@ -1,0 +1,148 @@
+.contactInformation {
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contactInformation .contactMap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  padding: 2.5rem;
+  background-color: #d1d5db;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-radius: 0.5rem;
+  height: 70vh;
+}
+
+.contactInformation .contactMap iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.contactInformation .contactMap .contactAddress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: #ffffff;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.contactInformation .contactMap .contactAddress .address {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.contactInformation .contactMap .contactAddress .address h2 {
+  color: #111827;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 1024px) {
+  .contactInformation .contactMap .contactAddress .address {
+    width: 50%;
+  }
+}
+
+.contactInformation .contactMap .contactAddress .email {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contactInformation .contactMap .contactAddress .email h2 {
+  color: #111827;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.contactInformation .contactMap .contactAddress .email a {
+  color: #6366f1;
+  line-height: 1.625;
+}
+
+.contactInformation .contactMap .contactAddress .email p {
+  line-height: 1.625;
+}
+
+@media (min-width: 1024px) {
+  .contactInformation .contactMap .contactAddress .email {
+    margin-top: 0;
+    width: 50%;
+  }
+}
+
+@media (min-width: 640px) {
+  .contactInformation .contactMap {
+    margin-right: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contactInformation .contactMap {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contactInformation .contactMap {
+    width: 66.666667%;
+  }
+}
+
+.contactInformation .contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .contactInformation .contactForm {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 0;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contactInformation .contactForm {
+    width: 33.333333%;
+  }
+}
+
+@media (min-width: 640px) {
+  .contactInformation {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+/*# sourceMappingURL=Contact.css.map */

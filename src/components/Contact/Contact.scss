@@ -1,0 +1,100 @@
+.contactInformation {
+    width: 100%;
+    flex-wrap: wrap;
+    .contactMap {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        padding: 2.5rem;
+        background-color: #d1d5db;
+        justify-content: flex-start;
+        align-items: flex-end;
+        border-radius: 0.5rem;
+        height: 70vh;
+        iframe {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .contactAddress {
+            display: flex;
+            position: relative;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            background-color: #ffffff;
+            flex-wrap: wrap;
+            border-radius: 0.25rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            .address {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                h2 {
+                    color: #111827;
+                    font-size: 0.75rem;
+                    line-height: 1rem;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                }
+                @media (min-width: 1024px) {
+                    width: 50%;
+                }
+            }
+            .email {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                margin-top: 1rem;
+                h2 {
+                    color: #111827;
+                    font-size: 0.75rem;
+                    line-height: 1rem;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                }
+                a {
+                    color: #6366f1;
+                    line-height: 1.625;
+                }
+                p {
+                    line-height: 1.625;
+                }
+                @media (min-width: 1024px) {
+                    margin-top: 0;
+                    width: 50%;
+                }
+            }
+        }
+
+        @media (min-width: 640px) {
+            margin-right: 2.5rem;
+        }
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+        @media (min-width: 1024px) {
+            width: 66.666667%;
+        }
+    }
+    .contactForm {
+        display: flex;
+        margin-top: 2rem;
+        // background-color: #ffffff;
+        flex-direction: column;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            margin-top: 0;
+            width: 50%;
+        }
+        @media (min-width: 1024px) {
+            width: 33.333333%;
+        }
+    }
+
+    @media (min-width: 640px) {
+        flex-wrap: nowrap;
+    }
+}

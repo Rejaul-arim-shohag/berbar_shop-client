@@ -4,7 +4,9 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import '../node_modules/aos/dist/aos.css';
 import AboutUs from './components/AboutUs/AboutUs';
+import Contact from "./components/Contact/Contact";
 import AllMentor from './components/Mentor/AllMentor';
+import Models from "./components/Models/Models";
 import AllServices from './components/Services/AllServices';
 import Testimonial from './components/Testimonial/Testimonial';
 import ComingSoon from './pages/ComingSoon.page';
@@ -22,10 +24,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path='/features' element={<Features />}>
               <Route path='service' element={<AllServices />} />
-              <Route path='gallery' element={<ComingSoon />} />
+              <Route path='gallery' element={<Models />} />
               <Route path='reviews' element={< Testimonial />} />
               <Route path='about' element={<AboutUs routingAbout/>} />
-              <Route path='contact' element={<ComingSoon />} />
+              <Route path='contact' element={<Contact />} />
               <Route path='*' index element={<NotFound />} />
             </Route>
             <Route path='*' index element={<NotFound />} />
