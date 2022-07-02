@@ -1,6 +1,5 @@
-import React from 'react'
 import { useParams } from 'react-router-dom';
-import Booking from '../components/Booking/Booking';
+import AppointmentForm from '../components/Booking/AppointmentForm';
 import Footer from '../components/Footer/Footer';
 import UpperNav from '../components/HeroSaction/UpperNav';
 import HomePageLayout from '../components/Layout/HomePageLayout';
@@ -18,7 +17,7 @@ export default function BookingPage() {
         </div>
       </div>
       <HomePageLayout title="Set a appointment" des="Best place to get a beautiful haircut">
-        <Booking />
+        <AppointmentForm />
       </HomePageLayout>
       <Footer />
 

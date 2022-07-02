@@ -32,7 +32,7 @@ export default function AllServices() {
                             {services?.map((_, idx) => (
                                 <Col key={idx} className="p-3">
                                     <Card>
-                                        <Link class="d-block serviceCard" to="/">
+                                        <Link class="d-block serviceCard"  to={`/booking/${_.id}`}>
                                             <div
                                                 class="position-relative  h-100  bg-light border-4 border-dark rounded"
                                             >
