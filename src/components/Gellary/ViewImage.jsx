@@ -16,14 +16,8 @@ export default function ViewImage({ item }) {
                         className="rounded h-100"
                         alt="Gallery"
                     />
-                    <Card.ImgOverlay className=' galleryOverlayText d-none d-md-flex align-items-end'>
-                        {/* <Card.Title>Hairy Style</Card.Title> */}
-                        {/* <p style={{ fontSize: ".7em" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p> */}
-                        <div className="d-flex gap-2">
-                            {/* <Link to={`/booking/${_.id}`} className="navBtn booking rounded fw-bolder py-1 px-2">Book Now</Link> */}
-                            {/* <button className='navBtn booking rounded fw-bolder py-1 px-2 '>View</button> */}
-
-                        </div>
+                    <Card.ImgOverlay className=' galleryOverlayText d-flex align-items-center'>
+                        <button className='navBtn booking rounded fw-bolder py-1 px-2 mx-auto'>View</button>
 
                     </Card.ImgOverlay>
                 </Card>
