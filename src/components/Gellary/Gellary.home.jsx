@@ -29,29 +29,7 @@ export default function Gallery() {
                     <Row className="" md={5} xs={3}>
                         {
                             modelPhotos?.slice(0,5).map((_, index) => (
-                                // <Col className="position-relative" key={index}>
-                                //     <div className="my-2 rounded-6">
-                                //         <Card className="bg-dark   galleryCard text-white">
-                                //             <img
-                                //                 src={_.avatar}
-                                //                 className="rounded bruh"
-                                //                 alt="Gallery"
-                                //             />
-                                //             <Card.ImgOverlay className=' galleryOverlayText d-none d-md-flex align-items-end'>
-                                //                 {/* <Card.Title>Hairy Style</Card.Title> */}
-                                //                 {/* <p style={{ fontSize: ".7em" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p> */}
-                                //                 <div className="d-flex gap-2">
-                                //                     {/* <Link to={`/booking/${_.id}`} className="navBtn booking rounded fw-bolder py-1 px-2">Book Now</Link> */}
-                                //                     {/* <button className='navBtn booking rounded fw-bolder py-1 px-2 '>View</button> */}
-
-                                //                 </div>
-
-                                //             </Card.ImgOverlay>
-                                //         </Card>
-                                //     </div>
-
-
-                                // </Col>
+                             
                                 <ViewImage item={_}/>
                             ))
                         }

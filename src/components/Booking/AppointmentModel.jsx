@@ -10,6 +10,7 @@ export default function AppointmentModel(props) {
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
+            className='border-0'
         >
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
@@ -23,6 +24,10 @@ export default function AppointmentModel(props) {
                             <label htmlFor="inputBooking4" className="form-label">Booking Date</label>
                             <p>{moment(props.date).format('Do MMMM, YYYY')}</p>
                             {/* <input required type="date" className="form-control" id="inputBooking4" /> */}
+                        </div>
+                        <div className="col-6">
+                            <label htmlFor="inputAddress" className="form-label">Service</label>
+                            <p>Haircuts and Styling</p>
                         </div>
                         <div className="col-md-6">
                             <label htmlFor="inputState" className="form-label">Slot</label>
@@ -43,6 +48,7 @@ export default function AppointmentModel(props) {
                             <label htmlFor="inputAddress" className="form-label">Name</label>
                             <input required type="text" className="form-control" id="inputAddress" placeholder="Rabbil Hasan" />
                         </div>
+                       
                         <div className="col-6">
                             <label htmlFor="inputAddress2" className="form-label">Age</label>
                             <input required type="number" className="form-control" id="inputAddress2" placeholder="30" />

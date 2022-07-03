@@ -16,8 +16,8 @@ export default function ViewImage({ item }) {
                         className="rounded h-100"
                         alt="Gallery"
                     />
-                    <Card.ImgOverlay className=' galleryOverlayText d-flex align-items-center'>
-                        <button className='navBtn booking rounded fw-bolder py-1 px-2 mx-auto'>View</button>
+                    <Card.ImgOverlay className='galleryOverlayText  d-flex align-items-center'>
+                        <button className='galBtn border-0  rounded fw-bolder py-1 px-2 mx-auto'>View</button>
 
                     </Card.ImgOverlay>
                 </Card>

@@ -4,7 +4,7 @@
 
 .galleryCard {
     cursor: zoom-in !important;
-    transition: all 300ms ease-in-out;
+    // transition: all 300ms ease-in-out;
     // height: 20em;
     // width: 20em;
 
@@ -21,13 +21,19 @@
         img {
             opacity: 0.4;
         }
-        .overlayButton {
-            opacity: 1;
+        .galBtn {
+            background-color: #ab007d;
+            color: white;
+            border-radius: 8px;
+            border: none;
         }
+        // .overlayButton {
+        //     opacity: 1;
+        // }
     }
-    .galleryOverlayText {
-        transition: all 300ms ease-in-out;
+    // .galleryOverlayText {
+    //     transition: all 300ms ease-in-out;
 
-        opacity: 0;
-    }
+    //     opacity: 0;
+    // }
 }
