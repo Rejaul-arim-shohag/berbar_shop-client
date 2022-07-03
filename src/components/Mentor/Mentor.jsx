@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 import HomePageLayout from '../Layout/HomePageLayout';
-import "./mentor.css"
+import "./mentor.scss"
 export default function Mentor() {
     const [mentorPhotos, setMentorPhotos] = useState([]);
 
@@ -29,7 +29,7 @@ export default function Mentor() {
                                     <Col className=" " key={index}>
 
                                         <div className=" text-center mentorCard">
-                                            <div className="bg-image hover-zoom mentorImg ">
+                                            <div className=" mentorImg ">
                                                 {/* <img src={item.avatar} alt="" className='h-100 w-100 ' /> */}
                                                 <img
                                                     src={item.avatar}

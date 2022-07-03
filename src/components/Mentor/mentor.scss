@@ -13,6 +13,12 @@
   .mentorImg img{
     border-top-left-radius: 8pt;
     width: 100%!important;
+    transition: all 300ms ease;
+
+    &:hover{
+      transform: scale(1.1);
+      border-radius: 8pt!important;
+    }
   }
 
   border-radius: 8pt;

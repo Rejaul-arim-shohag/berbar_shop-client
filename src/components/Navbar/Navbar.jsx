@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react'
+import 'animate.css'
+import { useState } from 'react'
 import { Offcanvas } from 'react-bootstrap'
-import { AiFillContacts, AiFillSetting, AiOutlineControl, AiOutlineHome, AiOutlineRight, AiOutlineTeam } from 'react-icons/ai'
-import { FiMessageSquare } from 'react-icons/fi'
+import { AiFillContacts, AiFillSetting, AiOutlineControl, AiOutlineHome, AiOutlineRight } from 'react-icons/ai'
 import { GiHamburgerMenu, GiMoneyStack } from 'react-icons/gi'
 import { Link, NavLink } from "react-router-dom"
-import "./Navbar.css"
-import 'animate.css';
 import useScrollPosition from '../../hooks/useScrollPosition'
+import "./Navbar.css"
 export default function Navbar() {
     const [show, setShow] = useState(false);
     const [isScroll, setIsScroll] = useState(false);

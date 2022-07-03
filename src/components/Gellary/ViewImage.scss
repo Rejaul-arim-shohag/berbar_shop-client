@@ -1,0 +1,30 @@
+// .galleryPhoto {
+//     background: linear-gradient(to-Bottom, #00000000, #290a5c80);
+// }
+
+
+.galleryCard {
+    cursor: zoom-in !important;
+    transition: all 300ms ease-in-out;
+    // height: 20em;
+    // width: 20em;
+ 
+    &:hover {
+        .galleryOverlayText {
+            opacity: 1;
+        }
+        img {
+            opacity: 0.5;
+        }
+      
+    }
+    .galleryOverlayText {
+        transition: all 300ms ease-in-out;
+
+        opacity: 0;
+    }
+}
+
+
+
+

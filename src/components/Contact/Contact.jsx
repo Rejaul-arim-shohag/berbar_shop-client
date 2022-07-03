@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import './Contact.css'
-import * as mdb from 'mdb-ui-kit';
 import Footer from '../Footer/Footer';
 
 export default function Contact() {
@@ -38,20 +37,20 @@ export default function Contact() {
                     <form>
                         {/* <!-- Name input --> */}
                         <div className="form-outline mb-4">
-                            <input required type="text" id="form4Example1" className="form-control border" />
                             <label className="form-label" for="form4Example1">Name</label>
+                            <input required type="text" id="form4Example1" className="form-control border" />
                         </div>
 
                         {/* <!-- Email input --> */}
                         <div className="form-outline mb-4">
-                            <input required type="email" id="form4Example2" className="form-control border" />
                             <label className="form-label" for="form4Example2">Email address</label>
+                            <input required type="email" id="form4Example2" className="form-control border" />
                         </div>
 
                         {/* <!-- Message input --> */}
                         <div className="form-outline mb-4">
-                            <textarea required className="form-control border" id="form4Example3" rows="4"></textarea>
                             <label className="form-label" for="form4Example3">Message</label>
+                            <textarea required className="form-control border" id="form4Example3" rows="4"></textarea>
                         </div>
 
 

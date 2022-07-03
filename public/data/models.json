@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "name": "Haircuts and Styling",
+    "image":"/images/models/01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Haircuts and Styling",
+    "image":"/images/models/02.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Haircuts and Styling",
+    "image":"/images/models/03.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Haircuts and Styling",
+    "image":"/images/models/04.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Haircuts and Styling",
+    "image":"/images/models/05.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Haircuts and Styling",
+    "image":"/images/models/01.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Haircuts and Styling",
+    "image":"/images/models/02.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Haircuts and Styling",
+    "image":"/images/models/03.jpg"
+  }
+
+]

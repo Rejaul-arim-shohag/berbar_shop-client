@@ -46,7 +46,7 @@ export default function Models() {
                                 <SwiperSlide key={index}>
                                     <div className="h-100 w-100 modelCard position-relative">
                                         <div className="h-100 w-100 modelPhoto">
-                                            <Card className="bg-dark text-white">
+                                            <Card className=" text-white">
                                                 {/* <Card.Img src={item.picture.large} alt="Card image" /> */}
                                                 <img
                                                     src={item.avatar}

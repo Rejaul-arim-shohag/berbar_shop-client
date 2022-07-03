@@ -6,10 +6,14 @@ import AboutUs from '../components/AboutUs/AboutUs'
 import Testimonial from '../components/Testimonial/Testimonial'
 import Gallery from '../components/Gellary/Gellary.home'
 import { Link } from "react-router-dom"
+import BookNowBadge from '../components/BookNowBadge/BookNowBadge'
 export default function Home() {
   return (
     <div className='position-relative'>
+
+      <BookNowBadge />
       <HeroSection />
+
       <AboutUs />
       {/* <Services />
       <Models /> */}
@@ -17,11 +21,10 @@ export default function Home() {
       <Mentor />
       <Testimonial />
       <Footer />
+     
 
-      {/* <div className="position-absolute">
-        <Link to={`/booking/1`} className="navBtn booking rounded fw-bolder py-1 px-2">Book Now</Link>
 
-      </div> */}
+
     </div>
   )
 }

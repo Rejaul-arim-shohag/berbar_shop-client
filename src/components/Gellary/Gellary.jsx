@@ -6,7 +6,8 @@ import { useQuery } from 'react-query';
 import Footer from '../Footer/Footer';
 import HomePageLayout from "../Layout/HomePageLayout"
 import Models from '../Models/Models';
-import './Gallery.css'
+import './gallery.scss';
+
 export default function Gallery() {
     const [modelPhotos, setModelPhotos] = useState();
     const { isLoading, error, data, isFetching } = useQuery("models", () =>
@@ -28,7 +29,7 @@ export default function Gallery() {
                             modelPhotos?.map((_, index) => (
                                 <Col className="position-relative" key={index}>
                                     <div className="my-2    rounded-6">
-                                        <Card className="bg-dark   galleryCard text-white">
+                                        <Card className=" galleryCard text-white">
                                             <img
                                                 src={_.avatar}
                                                 className="rounded bruh"
