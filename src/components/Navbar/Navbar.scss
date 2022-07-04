@@ -1,9 +1,6 @@
 .navBar {
     background: rgb(0, 1, 51);
-    background: -moz-radial-gradient(circle, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
-    background: -webkit-radial-gradient(circle, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
-    background: radial-gradient(circle, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133",endColorstr="#9f0078",GradientType=1);
+   
 }
 
 .burgerMenu:focus {

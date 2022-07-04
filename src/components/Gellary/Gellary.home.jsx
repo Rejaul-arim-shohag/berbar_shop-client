@@ -1,43 +1,62 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
-import { BsFacebook, BsInstagram } from 'react-icons/bs';
+import { useCallback, useEffect, useState } from 'react';
+import Gallery from "react-photo-gallery";
 import { useQuery } from 'react-query';
 import HomePageLayout from "../Layout/HomePageLayout";
-import { Link } from 'react-router-dom'
-import './ViewImage.scss'
+import './ViewImage.scss';
 
+import Carousel, { Modal, ModalGateway } from "react-images";
+import Loader from '../../helper/Loading';
 import './gallery.scss';
-import ViewImage from './ViewImage';
 
-export default function Gallery() {
-    const [modelPhotos, setModelPhotos] = useState();
-    const { isLoading, error, data, isFetching } = useQuery("models", () =>
+export default function GalleryHome() {
+    const [modelPhotos, setModelPhotos] = useState([]);
+    const { isLoading, error, data, isFetching } = useQuery("galleryPhoto", () =>
         axios.get(
-            "data/models.json"
+            "/data/models.json"
         ).then(({ data }) => data)
     );
+    const [currentImage, setCurrentImage] = useState(0);
+    const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+    const openLightbox = useCallback((event, { photo, index }) => {
+        setCurrentImage(index);
+        setViewerIsOpen(true);
+    }, []);
+
+    const closeLightbox = () => {
+        setCurrentImage(0);
+        setViewerIsOpen(false);
+    };
 
     useEffect(() => setModelPhotos(data), [data])
 
-
+    if (isLoading) {
+        return <Loader />
+    }
 
     return (
         <>
             <div className="">
-                <HomePageLayout title="Our Gallery" des="We never forget our beloved clients">
-                    <Row className="" md={5} xs={3}>
-                        {
-                            modelPhotos?.slice(0,5).map((_, index) => (
-                             
-                                <ViewImage item={_}/>
-                            ))
-                        }
+                <HomePageLayout title="Our Gallery" des="We never forget our beloved clients ">
 
-
-                    </Row>
+                    <Gallery photos={modelPhotos} onClick={openLightbox} />
+                    <ModalGateway>
+                        {viewerIsOpen ? (
+                            <Modal onClose={closeLightbox}>
+                                <Carousel
+                                    currentIndex={currentImage}
+                                    views={modelPhotos.map(x => ({
+                                        ...x,
+                                        srcset: x.srcSet,
+                                        caption: x.title
+                                    }))}
+                                />
+                            </Modal>
+                        ) : null}
+                    </ModalGateway>
                 </HomePageLayout>
-               
+
 
             </div>
         </>

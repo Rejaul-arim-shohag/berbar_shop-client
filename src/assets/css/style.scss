@@ -21,13 +21,11 @@ a {
 }
 
 .features {
-    background: rgb(0, 1, 51);
-    background: -moz-linear-gradient(128deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
-    background: -webkit-linear-gradient(128deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
-    background: linear-gradient(128deg, rgba(0, 1, 51, 1) 34%, rgba(159, 0, 120, 1) 99%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133", endColorstr="#9f0078", GradientType=1);
+    background: #000133;
 }
-
+.feature_outlet{
+    background: #fd297a1a;
+}
 .comingSoon {
     height: 80vh;
     width: 100%;

@@ -5,7 +5,7 @@ import { AiFillContacts, AiFillSetting, AiOutlineControl, AiOutlineHome, AiOutli
 import { GiHamburgerMenu, GiMoneyStack } from 'react-icons/gi'
 import { Link, NavLink } from "react-router-dom"
 import useScrollPosition from '../../hooks/useScrollPosition'
-import "./Navbar.css"
+import "./Navbar.scss"
 export default function Navbar() {
     const [show, setShow] = useState(false);
     const [isScroll, setIsScroll] = useState(false);

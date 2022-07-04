@@ -26,21 +26,26 @@ export default function Mentor() {
                         {
                             mentorPhotos?.slice(0, 4)?.map((item, index) => {
                                 return (
-                                    <Col className=" " key={index}>
+                                    <Col className="  " key={index} >
 
-                                        <div className=" text-center mentorCard">
-                                            <div className=" mentorImg ">
-                                                {/* <img src={item.avatar} alt="" className='h-100 w-100 ' /> */}
-                                                <img
-                                                    src={item.avatar}
-                                                    className=" shadow-2-strong "
-                                                    alt="Mentor team"
-                                                />
+                                        <div 
+                                            data-aos="fade-up"
+                                            data-aos-easing="linear"
+                                            data-aos-duration="1500">
+                                            <div className=" text-center mentorCard" >
+                                                <div className=" mentorImg ">
+                                                    {/* <img src={item.avatar} alt="" className='h-100 w-100 ' /> */}
+                                                    <img
+                                                        src={item.avatar}
+                                                        className=" shadow-2-strong "
+                                                        alt="Mentor team"
+                                                    />
 
-                                            </div>
-                                            <div className="mentorText">
-                                                <h3 className='mt-md-4 mentorName'>{item.name}</h3>
-                                                <p className='text-light' style={{ fontSize: "1.5ch" }}>{item.designation}</p>
+                                                </div>
+                                                <div className="mentorText">
+                                                    <h3 className='mt-md-4 mentorName'>{item.name}</h3>
+                                                    <p className='text-light' style={{ fontSize: "1.5ch" }}>{item.designation}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </Col>

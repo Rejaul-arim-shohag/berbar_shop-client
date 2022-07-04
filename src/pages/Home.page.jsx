@@ -3,21 +3,20 @@ import HeroSection from '../components/HeroSaction/HeroSection'
 import Mentor from '../components/Mentor/Mentor'
 
 import AboutUs from '../components/AboutUs/AboutUs'
-import Testimonial from '../components/Testimonial/Testimonial'
-import Gallery from '../components/Gellary/Gellary.home'
-import { Link } from "react-router-dom"
 import BookNowBadge from '../components/BookNowBadge/BookNowBadge'
+import GalleryHome from '../components/Gellary/Gellary.home'
+import Testimonial from '../components/Testimonial/Testimonial'
 export default function Home() {
   return (
     <div className='position-relative'>
 
-      <BookNowBadge />
+      <BookNowBadge home/>
       <HeroSection />
 
       <AboutUs />
       {/* <Services />
       <Models /> */}
-      <Gallery />
+      <GalleryHome />
       <Mentor />
       <Testimonial />
       <Footer />

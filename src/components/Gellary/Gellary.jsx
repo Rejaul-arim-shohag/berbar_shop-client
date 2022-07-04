@@ -1,22 +1,41 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { Card, Col, Row } from 'react-bootstrap';
-import { BsFacebook, BsInstagram } from 'react-icons/bs';
+import { useCallback, useEffect, useState } from 'react';
+import Gallery from "react-photo-gallery";
 import { useQuery } from 'react-query';
+import HomePageLayout from "../Layout/HomePageLayout";
+import './ViewImage.scss';
+
+import Carousel, { Modal, ModalGateway } from "react-images";
+import Loader from '../../helper/Loading';
 import Footer from '../Footer/Footer';
-import HomePageLayout from "../Layout/HomePageLayout"
 import Models from '../Models/Models';
 import './gallery.scss';
 
-export default function Gallery() {
-    const [modelPhotos, setModelPhotos] = useState();
-    const { isLoading, error, data, isFetching } = useQuery("models", () =>
+export default function MyGallery() {
+    const [modelPhotos, setModelPhotos] = useState([]);
+    const { isLoading, error, data, isFetching } = useQuery("galleryPhoto", () =>
         axios.get(
-            "https://testimonialapi.toolcarton.com/api"
+            "/data/models.json"
         ).then(({ data }) => data)
     );
+    const [currentImage, setCurrentImage] = useState(0);
+    const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+    const openLightbox = useCallback((event, { photo, index }) => {
+        setCurrentImage(index);
+        setViewerIsOpen(true);
+    }, []);
+
+    const closeLightbox = () => {
+        setCurrentImage(0);
+        setViewerIsOpen(false);
+    };
 
     useEffect(() => setModelPhotos(data), [data])
+
+    if (isLoading) {
+        return <Loader />
+    }
 
 
 
@@ -24,33 +43,21 @@ export default function Gallery() {
         <>
             <div className="">
                 <HomePageLayout title="Our Gallery" des="We never forget our beloved clients">
-                    <Row className="" md={5} xs={3}>
-                        {
-                            modelPhotos?.map((_, index) => (
-                                <Col className="position-relative" key={index}>
-                                    <div className="my-2    rounded-6">
-                                        <Card className=" galleryCard text-white">
-                                            <img
-                                                src={_.avatar}
-                                                className="rounded bruh"
-                                                alt="Gallery"
-                                            />
-                                            <Card.ImgOverlay className=' galleryOverlayText d-none d-md-block'>
-                                                <Card.Title>{_.name}</Card.Title>
-                                                <p style={{ fontSize: ".7em" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt dolore rerum in a ipsum.</p>
-                                                <BsFacebook />
-                                                <BsInstagram className='ms-3' />
-                                            </Card.ImgOverlay>
-                                        </Card>
-                                    </div>
-
-
-                                </Col>
-                            ))
-                        }
-
-
-                    </Row>
+                    <Gallery photos={modelPhotos} onClick={openLightbox} />
+                    <ModalGateway>
+                        {viewerIsOpen ? (
+                            <Modal onClose={closeLightbox}>
+                                <Carousel
+                                    currentIndex={currentImage}
+                                    views={modelPhotos.map(x => ({
+                                        ...x,
+                                        srcset: x.srcSet,
+                                        caption: x.title
+                                    }))}
+                                />
+                            </Modal>
+                        ) : null}
+                    </ModalGateway>
                 </HomePageLayout>
                 <div className="my-5 mt-5">
                     <Models />
