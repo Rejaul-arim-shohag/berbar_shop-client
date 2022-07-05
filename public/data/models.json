@@ -3,8 +3,8 @@
     "id": 1,
     "name": "Haircuts and Styling",
     "src":"/images/models/01.jpg",
-    "width":4,
-    "height":3
+    "width":1,
+    "height":1
   },
   {
     "id": 2,
@@ -17,22 +17,22 @@
     "id": 3,
     "name": "Haircuts and Styling",
     "src":"/images/models/03.jpg",
-    "width":4,
-    "height":3
+    "width":1,
+    "height":1
   },
   {
     "id": 4,
     "name": "Haircuts and Styling",
     "src":"/images/models/04.jpg",
-    "width":3,
-    "height":4
+    "width":1,
+    "height":1
   },
   {
     "id": 5,
     "name": "Haircuts and Styling",
     "src":"/images/models/05.jpg",
-    "width":4,
-    "height":3
+    "width":1,
+    "height":1
   },
   {
     "id": 6,
@@ -45,8 +45,8 @@
     "id": 7,
     "name": "Haircuts and Styling",
     "src":"/images/models/02.jpg",
-    "width":4,
-    "height":3
+    "width":1,
+    "height":1
   },
   {
     "id": 8,

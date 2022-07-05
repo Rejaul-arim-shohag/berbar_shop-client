@@ -6,7 +6,7 @@ import axios from 'axios'
 import Footer from '../Footer/Footer';
 import StarRatings from 'react-star-ratings';
 import { useQuery } from 'react-query';
-import "./Services.css";
+import "./services.scss";
 import { Link } from "react-router-dom"
 export default function AllServices() {
     const [services, setServices] = useState([]);

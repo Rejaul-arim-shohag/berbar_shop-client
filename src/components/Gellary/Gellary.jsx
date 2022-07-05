@@ -59,9 +59,9 @@ export default function MyGallery() {
                         ) : null}
                     </ModalGateway>
                 </HomePageLayout>
-                <div className="my-5 mt-5">
+                {/* <div className="my-5 mt-5">
                     <Models />
-                </div>
+                </div> */}
                 <Footer />
             </div>
         </>

@@ -1,46 +1,116 @@
-
 .form-control:focus {
-    border-color: transparent!important;
+    border-color: transparent !important;
     // box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
-  }
-  .appointmentCard {
-    height: 14rem;
+}
+.appointCard {
+    height: 13em;
     box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
     background: white;
     border-radius: 8pt;
-  
+    margin-bottom: 2em;
+    &:hover {
+    }
+
+    .title {
+        font-size: 0.8em;
+    }
+    .slot {
+        font-size: 0.7em;
+    }
+    .price {
+        font-size: 0.7em;
+    }
+
+    @media (min-width: 600px) {
+        height: 15em;
+        .title {
+            font-size: 1.5em;
+        }
+        .slot {
+            font-size: 1em;
+        }
+        .price {
+            font-size: 1em;
+        }
+    }
+    .appointBtn {
+        background-color: #ab007d;
+        color: white;
+        border-radius: 8px;
+        transition: all 200ms ease-in-out;
+        border: none;
+        font-size: 0.6em;
+        &:hover {
+            background-color: #000;
+        }
+        @media (min-width: 600px) {
+            font-size: 1em;
+        }
+    }
+
     div {
         transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
         transition-duration: 300ms;
-        h3{
-          color: #9f0078!important;
-         }
-     
+        h3 {
+            color: #9f0078 !important;
+        }
+
         &:hover {
-            transform: translateX(-0.5rem);
-            transform: translateY(-0.5rem);
-            box-shadow: 8px 8px 0 0 #9f0078;
-           
-            .overlayButton{
-              transform:none;
-             
-              box-shadow:none;
+            // transform: translateX(-0.5rem);
+            // transform: translateY(-0.5rem);
+            // box-shadow: 8px 8px 0 0 #9f0078;
+
+            .overlayButton {
+                transform: none;
+
+                box-shadow: none;
             }
-         
         }
     }
 }
-// .modal-backdrop.show {
-//     opacity: 0.2!important;
-// }
+.appointLabel {
+    font-size: 0.8em !important;
+    font-weight: 600 !important;
+    color: #758283;
+}
 
-@media only screen and (max-width: 600px) {
+.modal-backdrop.show {
+    opacity: .1!important;
+}
+.form-control,.form-select{
+    padding: .5em!important;
+    font-size: .8em!important;
+}
+.form-control:focus {
+    border: 1px solid #ced4da !important;
+    box-shadow: none;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid,.was-validated .form-select:invalid {
+    border-color: #ced4da!important;
+ 
+}
+.form-control.is-invalid, .was-validated .form-control:valid,.was-validated .form-select:valid {
+    border-color: #ced4da!important;
+ 
+}
+.modal_title{
+    font-size: 1 !important;
+
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 40vw !important;
+    }
+}
+
+@media only screen and (min-width: 600px) {
     .services {
         .star-container {
             padding: 0 !important;
         }
     }
     .appointmentCard {
-        height: 10rem;
+        // height: 10rem;
     }
 }

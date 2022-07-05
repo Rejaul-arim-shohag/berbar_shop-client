@@ -1,12 +1,12 @@
 import axios from 'axios';
 import moment from 'moment';
 import { useEffect, useState } from 'react';
-import { Card, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 import { useQuery } from 'react-query';
+import "./appointment.scss";
 import AppointmentModel from './AppointmentModel';
-import "./appointment.scss"
 export default function AppointmentForm() {
     const [modalShow, setModalShow] = useState(false);
     const [date, setDate] = useState(new Date());
@@ -45,10 +45,10 @@ export default function AppointmentForm() {
     // console.log('date', date);
     return (
         <div>
-            <div className="datePicker d-flex gap-3 flex-column flex-md-row">
+            <div className="datePicker d-flex gap-3 flex-column flex-md-row justify-content-center  align-items-center align-items-md-start">
                 <div className="calender">
                     <div className="fade-up">
-                        <div className=' p-5'>
+                        <div className=' p-md-5'>
                             <>
                                 <style>{css}</style>
                                 <DayPicker
@@ -74,32 +74,33 @@ export default function AppointmentForm() {
                     <hr className="divider-horizontal " />
 
                     <div data-aos="fade-up">
-                        <Row xs={2} md={3} className="g-md-3 g-2">
+                        <Row xs={2} md={3} className="">
                             {appointmentData?.map((_, idx) => (
-                                <Col key={idx} className="p-3">
-                                    <Card>
-                                        <div className="d-block appointmentCard" >
-                                            <div
-                                                className="position-relative text-center pt-4   h-100  border-4 border-dark rounded"
-                                            >
-                                                {/* <img src={_.avatar} alt="" className='h-100 w-100 rounded' /> */}
-                                                <h5 className='d-block text-dark '>{_.name}</h5>
-                                                <p className='text-dark fw-bold fs-md-4 text-muted'>10 slots available</p>
-                                                <p className='text-dark fw-bold fs-md-4 '>${_.price} - {_.price + 100}</p>
+                                <Col key={idx} className=" ">
+                                    <div className="d-block appointCard p-3   " >
+                                        <div
+                                            className="position-relative appointContent text-center pt-4 d-flex flex-column justify-content-between   h-100  border-4 border-dark rounded"
+                                        >
+                                            {/* <img src={_.avatar} alt="" className='h-100 w-100 rounded' /> */}
+                                            <div className="">
+                                                <h5 className='d-block text-dark title'>{_.name}</h5>
+                                                <p className='text-dark fw-bold fs-md-4 text-muted slot'>10 slots available</p>
+                                                <p className='text-dark fw-bold fs-md-4 price'>${_.price} - {_.price + 100}</p>
 
                                                 <AppointmentModel
                                                     show={modalShow}
                                                     date={date}
                                                     slots={_.slots}
+                                                    setModalShow={setModalShow}
                                                     onHide={() => setModalShow(false)}
                                                 />
-                                                <div className="overlayButton">
-                                                    <button className='navBtn booking rounded-pill fw-bold py-2 px-5 ' onClick={() => setModalShow(true)}>Book Now</button>
+                                            </div>
+                                            <div className="overlayButton">
+                                                <button className='appointBtn booking rounded-pill  p-1  px-3 py-md-2 px-md-5 fw-bolder' onClick={() => setModalShow(true)}>Book Now</button>
 
-                                                </div>
                                             </div>
                                         </div>
-                                    </Card>
+                                    </div>
                                 </Col>
                             ))}
                         </Row>

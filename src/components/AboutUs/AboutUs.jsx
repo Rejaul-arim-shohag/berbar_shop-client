@@ -35,37 +35,33 @@ export default function AboutUs({ routingAbout }) {
     return (
         <main className={`${routingAbout ? '' : 'serviceSection'}`}>
 
-
-            <div data-aos="fade-up">
-                <HomePageLayout title="What We Can Do for You" des="Who are in extremely love with eco friendly system.">
-                    <Container className="" fluid >
-                        <Row>
-                            {
-                                data?.map((item, index) => (
-                                    <Col className="" key={index} xs={6} md={6}>
-                                        <div className="d-flex gap-2 ">
-                                            <div className="d-none d-md-block">
-                                                <img src={item.src} alt="" width={80} height={80} />
-                                            </div>
-                                            <div className="about_us">
-                                                <div className="d-flex">
-                                                    <img src={item.src} alt="" className="d-block d-md-none" width={40} height={40} />
-                                                    <h6 className='fw-bold '>{item.title}</h6>
-                                                </div>
-
-                                                <p className=' text-muted lh-md-lg ' style={{ textAlign: "justify", fontSize: ".7em" }}>{item.description}</p>
-                                            </div>
+            <HomePageLayout title="What We Can Do for You" des="Who are in extremely love with eco friendly system.">
+                <Container className="" fluid >
+                    <Row>
+                        {
+                            data?.map((item, index) => (
+                                <Col className="" key={index} xs={6} md={6}>
+                                    <div className="d-flex gap-2 ">
+                                        <div className="d-none d-md-block">
+                                            <img src={item.src} alt="" width={80} height={80} />
                                         </div>
-                                    </Col>
-                                ))
-                            }
-                        </Row>
-                    </Container>
+                                        <div className="about_us">
+                                            <div className="d-flex">
+                                                <img src={item.src} alt="" className="d-block d-md-none" width={40} height={40} />
+                                                <h6 className='fw-bold '>{item.title}</h6>
+                                            </div>
 
-                </HomePageLayout>
+                                            <p className=' text-muted lh-md-lg ' style={{ textAlign: "justify", fontSize: ".7em" }}>{item.description}</p>
+                                        </div>
+                                    </div>
+                                </Col>
+                            ))
+                        }
+                    </Row>
+                </Container>
 
+            </HomePageLayout>
 
-            </div>
             {routingAbout ? <Testimonial /> : <></>}
             {routingAbout ? <AllMentor /> : <></>}
 

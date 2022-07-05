@@ -4,7 +4,7 @@ import { Card, Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 import StarRatings from 'react-star-ratings';
 import HomePageLayout from '../Layout/HomePageLayout';
-import "./Services.css";
+import "./services.scss";
 import { Link } from "react-router-dom"
 import Slider from 'react-slick';
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";

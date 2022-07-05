@@ -40,17 +40,15 @@ a {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133", endColorstr="#9f0078", GradientType=1);
 }
 
-// .modal-dialog {
-//     max-width: 90vw!important;
-//     max-height:34em!important;
-// }
-.modal-backdrop.show {
-    opacity: .4!important;
+
+.form-control:focus,.form-select:focus {
+    border: 1px solid #ced4da !important;
+    box-shadow: none!important;
 }
 
 @media (min-width: 576px) {
     .modal-dialog {
-        max-width: 40vw!important;
+        // max-width: 40vw!important;
         // max-height:34em!important;
         // margin: 7.75rem auto!important;
     }

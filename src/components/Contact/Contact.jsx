@@ -38,24 +38,24 @@ export default function Contact() {
                         {/* <!-- Name input --> */}
                         <div className="form-outline mb-4">
                             <label className="form-label form_text fw-bolder" for="form4Example1">Your name</label>
-                            <input required type="text" id="form4Example1" className="form-control border form_input rounded-pill" />
+                            <input required type="text" id="form4Example1" className="form-control border form_input rounded-pill px-3 " />
                         </div>
                         {/* <!-- Mobile number input --> */}
                         <div className="form-outline mb-4">
                             <label className="form-label form_text fw-bolder" for="form4Example1">Your mobile</label>
-                            <input required type="tel" id="form4Example1" className="form-control border form_input rounded-pill" />
+                            <input required type="tel" id="form4Example1" className="form-control border form_input rounded-pill px-3" />
                         </div>
 
                         {/* <!-- Email input --> */}
                         <div className="form-outline mb-4">
                             <label className="form-label form_text fw-bolder" for="form4Example2">Your Email</label>
-                            <input required type="email" id="form4Example2" className="form-control border form_input rounded-pill" />
+                            <input required type="email" id="form4Example2" className="form-control border form_input rounded-pill px-3" />
                         </div>
 
                         {/* <!-- Message input --> */}
                         <div className="form-outline mb-4">
                             <label className="form-label form_text fw-bolder" for="form4Example3">Your Message</label>
-                            <textarea required className="form-control border form_input " id="form4Example3" rows="4"></textarea>
+                            <textarea required className="form-control border form_input px-3" id="form4Example3" rows="4"></textarea>
                         </div>
 
 
