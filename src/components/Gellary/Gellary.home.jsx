@@ -40,7 +40,7 @@ export default function GalleryHome() {
             <div className="">
                 <HomePageLayout title="Our Gallery" des="We never forget our beloved clients ">
 
-                    <Gallery photos={modelPhotos} onClick={openLightbox} />
+                    <Gallery  photos={modelPhotos} onClick={openLightbox} />
                     <ModalGateway>
                         {viewerIsOpen ? (
                             <Modal onClose={closeLightbox}>

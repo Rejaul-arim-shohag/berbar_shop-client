@@ -2,12 +2,10 @@ import axios from 'axios';
 import { useCallback, useEffect, useState } from 'react';
 import Gallery from "react-photo-gallery";
 import { useQuery } from 'react-query';
-import HomePageLayout from "../Layout/HomePageLayout";
 import './ViewImage.scss';
 
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Loader from '../../helper/Loading';
-import Footer from '../Footer/Footer';
 import './gallery.scss';
 
 export default function SalonGallery() {
@@ -20,12 +18,12 @@ export default function SalonGallery() {
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-    const openLightbox = useCallback((event, { photo, index }) => {
+    const openLightBox = useCallback((event, { photo, index }) => {
         setCurrentImage(index);
         setViewerIsOpen(true);
     }, []);
 
-    const closeLightbox = () => {
+    const closeLightBox = () => {
         setCurrentImage(0);
         setViewerIsOpen(false);
     };
@@ -49,10 +47,10 @@ export default function SalonGallery() {
                     </div>
                     <div data-aos="fade-up" >
                         <div className="bg-light p-3 rounded shadow-sm">
-                            <Gallery photos={modelPhotos} onClick={openLightbox} />
+                            <Gallery photos={modelPhotos} onClick={openLightBox} />
                             <ModalGateway>
                                 {viewerIsOpen ? (
-                                    <Modal onClose={closeLightbox}>
+                                    <Modal onClose={closeLightBox}>
                                         <Carousel
                                             currentIndex={currentImage}
                                             views={modelPhotos.map(x => ({

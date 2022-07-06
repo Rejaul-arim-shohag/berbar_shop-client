@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Cutting room",
+        "src": "/images/interior/cuttingroom.jfif"
+    },
+    {
+        "id": 2,
+        "name": "Manicure-Pedicure room",
+        "src": "/images/interior/manicure-pedicure-room.jfif"
+    },
+    {
+        "id": 3,
+        "name": "Message room",
+        "src": "/images/interior/massage-room.jfif"
+    },
+    {
+        "id": 4,
+        "name": "Waiting area",
+        "src": "/images/interior/waiting-area.jfif"
+    }
+]

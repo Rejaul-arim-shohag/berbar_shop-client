@@ -5,7 +5,7 @@ import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
 import { useQuery } from 'react-query';
 import Slider from "react-slick";
 import HomePageLayout from '../Layout/HomePageLayout';
-import "./Testimonial.css";
+import "./Testimonial.scss";
 
 export default function Testimonial() {
     const [testimonial, setTestimonial] = useState([]);

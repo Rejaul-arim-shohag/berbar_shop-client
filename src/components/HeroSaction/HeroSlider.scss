@@ -1,0 +1,13 @@
+.slider_card {
+    height: 25em;
+    background: transparent;
+    .slider_badge {
+        position: absolute;
+        border-radius: 5pt 0 0 5pt;
+        height: 3em;
+        width: 15em;
+        z-index: 3022;
+        right: 0;
+        bottom: 1em;
+    }
+}

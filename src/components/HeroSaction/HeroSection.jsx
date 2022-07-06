@@ -1,6 +1,7 @@
 import Navbar from '../Navbar/Navbar'
 import HeroContent from './HeroContent'
 import "./HeroSection.scss"
+import HeroSlider from './HeroSlider'
 import UpperNav from './UpperNav'
 export default function HeroSection() {
     return (
@@ -10,9 +11,7 @@ export default function HeroSection() {
                 <div className="container px-5 position-relative" >
                     <UpperNav />
                     <Navbar />
-                    <div data-aos="zoom-in">
-                        <HeroContent />
-                    </div>
+                    <HeroSlider/>
 
                 </div>
 
