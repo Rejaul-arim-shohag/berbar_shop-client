@@ -14,6 +14,14 @@
 .mentorCard .mentorImg img {
   border-top-left-radius: 8pt;
   width: 100% !important;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.mentorCard .mentorImg img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-radius: 8pt !important;
 }
 
 .mentorCard .mentorName {

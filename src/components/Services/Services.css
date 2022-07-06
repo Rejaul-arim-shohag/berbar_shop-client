@@ -27,7 +27,7 @@
   bottom: 0;
   pointer-events: none;
   background: rgba(250, 249, 249, 0.679);
-  line-height: .5ch;
+  line-height: 0.5ch;
 }
 
 .serviceCard div .overlayButton {
@@ -40,12 +40,10 @@
 }
 
 .serviceCard div:hover {
-  -webkit-transform: translateX(-0.5rem);
-          transform: translateX(-0.5rem);
+  -webkit-box-shadow: 0 8px 0 0 #9f0078;
+          box-shadow: 0 8px 0 0 #9f0078;
   -webkit-transform: translateY(-0.5rem);
           transform: translateY(-0.5rem);
-  -webkit-box-shadow: 8px 8px 0 0 #9f0078;
-          box-shadow: 8px 8px 0 0 #9f0078;
 }
 
 .serviceCard div:hover img {

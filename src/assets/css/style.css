@@ -18,10 +18,16 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .features {
   background: #000133;
-  background: linear-gradient(128deg, #000133 34%, #9f0078 99%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133", endColorstr="#9f0078", GradientType=1);
+}
+
+.feature_outlet {
+  background: #fd297a1a;
 }
 
 .comingSoon {
@@ -40,5 +46,12 @@ ul {
   background: #000133;
   background: linear-gradient(297deg, #000133 34%, #9f0078 99%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133", endColorstr="#9f0078", GradientType=1);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border: 1px solid #ced4da !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 /*# sourceMappingURL=style.css.map */

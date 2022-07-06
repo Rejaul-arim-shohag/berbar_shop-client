@@ -1,8 +1,9 @@
+import Footer from '../Footer/Footer'
+import "../HeroSaction/HeroSection.scss"
+import UpperNav from '../HeroSaction/UpperNav'
 import Navbar from '../Navbar/Navbar'
-import HeroContent from './HeroContent'
-import "./HeroSection.scss"
-import UpperNav from './UpperNav'
-export default function HeroSection() {
+import SalonGallery from './Gellary'
+export default function GallerySection() {
     return (
         <section className=''>
             
@@ -11,10 +12,12 @@ export default function HeroSection() {
                     <UpperNav />
                     <Navbar />
                     <div data-aos="zoom-in">
-                        <HeroContent />
+                        <SalonGallery />
                     </div>
 
                 </div>
+            <Footer />
+
 
 
             </main>

@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap"
 import HomePageLayout from '../Layout/HomePageLayout'
 import AllMentor from "../Mentor/AllMentor"
 import Testimonial from "../Testimonial/Testimonial"
-import "./AboutUs.css"
+import "./AboutUs.scss"
 export default function AboutUs({ routingAbout }) {
     useEffect(() => {
         window.scrollTo(0, 0)

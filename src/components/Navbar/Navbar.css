@@ -1,7 +1,5 @@
 .navBar {
   background: #000133;
-  background: radial-gradient(circle, #000133 34%, #9f0078 99%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133",endColorstr="#9f0078",GradientType=1);
 }
 
 .burgerMenu:focus {

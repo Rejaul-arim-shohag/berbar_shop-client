@@ -2,6 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+$light:#fff;
+@import "bootstrap/scss/bootstrap.scss";
+
+
+
+
 *,
 *::before,
 *::after {
@@ -23,7 +29,7 @@ a {
 .features {
     background: #000133;
 }
-.feature_outlet{
+.feature_outlet {
     background: #fd297a1a;
 }
 .comingSoon {
@@ -40,10 +46,10 @@ a {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000133", endColorstr="#9f0078", GradientType=1);
 }
 
-
-.form-control:focus,.form-select:focus {
+.form-control:focus,
+.form-select:focus {
     border: 1px solid #ced4da !important;
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
 
 @media (min-width: 576px) {
@@ -54,4 +60,4 @@ a {
     }
 }
 
-// @import "bootstrap/scss/bootstrap.scss";
+

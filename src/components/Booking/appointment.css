@@ -1,0 +1,125 @@
+.form-control:focus {
+  border-color: transparent !important;
+}
+
+.appointCard {
+  height: 13em;
+  -webkit-box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+          box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+  background: white;
+  border-radius: 8pt;
+  margin-bottom: 2em;
+}
+
+.appointCard .title {
+  font-size: 0.8em;
+}
+
+.appointCard .slot {
+  font-size: 0.7em;
+}
+
+.appointCard .price {
+  font-size: 0.7em;
+}
+
+@media (min-width: 600px) {
+  .appointCard {
+    height: 15em;
+  }
+  .appointCard .title {
+    font-size: 1.5em;
+  }
+  .appointCard .slot {
+    font-size: 1em;
+  }
+  .appointCard .price {
+    font-size: 1em;
+  }
+}
+
+.appointCard .appointBtn {
+  background-color: #ab007d;
+  color: white;
+  border-radius: 8px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  border: none;
+  font-size: 0.6em;
+}
+
+.appointCard .appointBtn:hover {
+  background-color: #000;
+}
+
+@media (min-width: 600px) {
+  .appointCard .appointBtn {
+    font-size: 1em;
+  }
+}
+
+.appointCard div {
+  -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, -webkit-box-shadow, -webkit-transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, -webkit-box-shadow, -webkit-transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, -webkit-box-shadow, -webkit-transform;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.appointCard div h3 {
+  color: #9f0078 !important;
+}
+
+.appointCard div:hover .overlayButton {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.appointLabel {
+  font-size: 0.8em !important;
+  font-weight: 600 !important;
+  color: #758283;
+}
+
+.modal-backdrop.show {
+  opacity: 0.1 !important;
+}
+
+.form-control, .form-select {
+  padding: 0.5em !important;
+  font-size: 0.8em !important;
+}
+
+.form-control:focus {
+  border: 1px solid #ced4da !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid, .was-validated .form-select:invalid {
+  border-color: #ced4da !important;
+}
+
+.form-control.is-invalid, .was-validated .form-control:valid, .was-validated .form-select:valid {
+  border-color: #ced4da !important;
+}
+
+.modal_title {
+  font-size: 1 !important;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 40vw !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .services .star-container {
+    padding: 0 !important;
+  }
+}
+/*# sourceMappingURL=appointment.css.map */

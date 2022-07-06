@@ -4,8 +4,8 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import '../node_modules/aos/dist/aos.css';
 import AboutUs from './components/AboutUs/AboutUs';
-import Contact from "./components/Contact/Contact";
-import Gallery from "./components/Gellary/Gellary";
+import ContactSection from "./components/Contact/ContactSection";
+import GallerySection from "./components/Gellary/GallerySection";
 import AllServices from './components/Services/AllServices';
 import Testimonial from './components/Testimonial/Testimonial';
 import PrivacyPolicy from "./components/UtilitiComponent/PrivacyPolicy";
@@ -26,20 +26,24 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="booking/:styleId" element={<BookingPage />} />
+            
             <Route path='features' element={<Features />}>
               <Route path='service' element={<AllServices />} />
-              <Route path='gallery' element={<Gallery />} />
               <Route path='reviews' element={< Testimonial />} />
               <Route path='about' element={<AboutUs routingAbout />} />
-              <Route path='contact' element={<Contact />} />
               <Route path='*' index element={<NotFound />} />
             </Route>
+
+            <Route path='gallery' element={<GallerySection />} />
+            <Route path='contact' element={<ContactSection />} />
+
             <Route path='utilities' element={<UtilitiesPage />} >
               <Route path='privacy' element={<PrivacyPolicy />} />
               <Route path='refund' element={<RefundPolicy />} />
               <Route path='termsConditions' element={<TermsConditions />} />
               <Route path='*' index element={<NotFound />} />
             </Route>
+
             <Route path='*' index element={<NotFound />} />
           </Routes>
         </BrowserRouter>

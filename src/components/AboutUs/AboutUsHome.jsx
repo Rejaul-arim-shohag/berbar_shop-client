@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap"
 import HomePageLayout from '../Layout/HomePageLayout'
 import AllMentor from "../Mentor/AllMentor"
-import "./AboutUs.css"
+import "./AboutUs.scss"
 export default function AboutUs({routingAbout}) {
 
     const data = [

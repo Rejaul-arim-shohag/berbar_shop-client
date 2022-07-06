@@ -1,9 +1,10 @@
 .contactInformation {
-    width: 100%;
+    width: 90%;
     flex-wrap: wrap;
-    .contactMap {
-        margin-top: 7em;
 
+    .contactMap {
+        // margin-top: 7em;
+        width: 100%;
         display: flex;
         overflow: hidden;
         position: relative;
@@ -43,7 +44,7 @@
                     font-size: 0.7em;
                 }
                 @media (min-width: 1024px) {
-                    width: 30%;
+                    // width: 30%;
                 }
             }
             .email,
@@ -77,10 +78,10 @@
             align-items: flex-end;
         }
         @media (min-width: 768px) {
-            width: 50%;
+            // width: 50%;
         }
         @media (min-width: 1024px) {
-            width: 66.666667%;
+            // width: 66.666667%;
         }
     }
     .contactForm {
@@ -100,7 +101,7 @@
         .form_text {
             font-size: 0.8em;
         }
-        textarea{
+        textarea {
             border-radius: 8pt;
         }
 
@@ -108,10 +109,10 @@
             padding-top: 2rem;
             padding-bottom: 2rem;
             margin-top: 0;
-            width: 50%;
+            // width: 50%;
         }
         @media (min-width: 1024px) {
-            width: 33.333333%;
+            // width: 33.333333%;
         }
     }
 

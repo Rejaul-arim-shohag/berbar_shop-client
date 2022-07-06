@@ -8,10 +8,9 @@ import './ViewImage.scss';
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Loader from '../../helper/Loading';
 import Footer from '../Footer/Footer';
-import Models from '../Models/Models';
 import './gallery.scss';
 
-export default function MyGallery() {
+export default function SalonGallery() {
     const [modelPhotos, setModelPhotos] = useState([]);
     const { isLoading, error, data, isFetching } = useQuery("galleryPhoto", () =>
         axios.get(
@@ -42,27 +41,37 @@ export default function MyGallery() {
     return (
         <>
             <div className="">
-                <HomePageLayout title="Our Gallery" des="We never forget our beloved clients">
-                    <Gallery photos={modelPhotos} onClick={openLightbox} />
-                    <ModalGateway>
-                        {viewerIsOpen ? (
-                            <Modal onClose={closeLightbox}>
-                                <Carousel
-                                    currentIndex={currentImage}
-                                    views={modelPhotos.map(x => ({
-                                        ...x,
-                                        srcset: x.srcSet,
-                                        caption: x.title
-                                    }))}
-                                />
-                            </Modal>
-                        ) : null}
-                    </ModalGateway>
-                </HomePageLayout>
+                <div className="container px-5 py-5">
+                    <div className="" data-aos="fade-down">
+                        <div className="text-center mb-5">
+                            <h3 className='text-uppercase layoutTitle text-light'>Our Gallery</h3>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" >
+                        <div className="bg-light p-3 rounded shadow-sm">
+                            <Gallery photos={modelPhotos} onClick={openLightbox} />
+                            <ModalGateway>
+                                {viewerIsOpen ? (
+                                    <Modal onClose={closeLightbox}>
+                                        <Carousel
+                                            currentIndex={currentImage}
+                                            views={modelPhotos.map(x => ({
+                                                ...x,
+                                                srcset: x.srcSet,
+                                                caption: x.title
+                                            }))}
+                                        />
+                                    </Modal>
+                                ) : null}
+                            </ModalGateway>
+                        </div>
+                    </div>
+
+                </div>
+
                 {/* <div className="my-5 mt-5">
                     <Models />
                 </div> */}
-                <Footer />
             </div>
         </>
     )

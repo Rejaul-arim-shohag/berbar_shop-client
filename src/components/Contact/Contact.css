@@ -5,6 +5,7 @@
 }
 
 .contactInformation .contactMap {
+  margin-top: 7em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +60,7 @@
 }
 
 .contactInformation .contactMap .contactAddress .address p {
-  font-size: .7em;
+  font-size: 0.7em;
 }
 
 @media (min-width: 1024px) {
@@ -68,13 +69,15 @@
   }
 }
 
-.contactInformation .contactMap .contactAddress .email, .contactInformation .contactMap .contactAddress .phone {
+.contactInformation .contactMap .contactAddress .email,
+.contactInformation .contactMap .contactAddress .phone {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   margin-top: 1rem;
 }
 
-.contactInformation .contactMap .contactAddress .email h2, .contactInformation .contactMap .contactAddress .phone h2 {
+.contactInformation .contactMap .contactAddress .email h2,
+.contactInformation .contactMap .contactAddress .phone h2 {
   color: #111827;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -82,17 +85,20 @@
   letter-spacing: 0.1em;
 }
 
-.contactInformation .contactMap .contactAddress .email a, .contactInformation .contactMap .contactAddress .phone a {
+.contactInformation .contactMap .contactAddress .email a,
+.contactInformation .contactMap .contactAddress .phone a {
   color: #6366f1;
   line-height: 1.625;
 }
 
-.contactInformation .contactMap .contactAddress .email p, .contactInformation .contactMap .contactAddress .phone p {
+.contactInformation .contactMap .contactAddress .email p,
+.contactInformation .contactMap .contactAddress .phone p {
   line-height: 1.625;
 }
 
 @media (min-width: 1024px) {
-  .contactInformation .contactMap .contactAddress .email, .contactInformation .contactMap .contactAddress .phone {
+  .contactInformation .contactMap .contactAddress .email,
+  .contactInformation .contactMap .contactAddress .phone {
     margin-top: 0;
     width: 30%;
   }
@@ -133,6 +139,20 @@
 
 .contactInformation .contactForm h3 {
   color: #9f0078;
+}
+
+.contactInformation .contactForm .form-control:focus {
+  border: 1px solid #ced4da !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.contactInformation .contactForm .form_text {
+  font-size: 0.8em;
+}
+
+.contactInformation .contactForm textarea {
+  border-radius: 8pt;
 }
 
 @media (min-width: 768px) {
