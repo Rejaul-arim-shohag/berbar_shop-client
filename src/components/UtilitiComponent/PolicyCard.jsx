@@ -30,7 +30,7 @@ export default function PolicyCard() {
     return (
         <div>
 
-            <Card className='shadow'>
+            <Card className='shadow-sm p-5'>
                 <Card.Body>
                     {
                         data?.map((item, index) => {

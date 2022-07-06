@@ -11,7 +11,7 @@ export default function HeroContent() {
         <Link className='appointment-btn btn btn-outline-light rounded-pill py-2 px-4 fw-bold text-light' to={`/booking/1`}>Set an appointment</Link>
 
       </div>
-      <div className="feature-card py-5 ">
+      <div className="feature-card py-5 shadow-sm">
         <div className="content  bg-light p-5 pb-md-0 " style={{ borderRadius: "20pt" }}>
           <div className=" d-flex justify-content-center align-items-center">
             <div className="w-50 gap-md-2 d-flex flex-column heroContent">

@@ -6,6 +6,7 @@ import AboutUs from '../components/AboutUs/AboutUs'
 import BookNowBadge from '../components/BookNowBadge/BookNowBadge'
 import GalleryHome from '../components/Gellary/Gellary.home'
 import Testimonial from '../components/Testimonial/Testimonial'
+import Stats from '../components/Stats/Stats'
 export default function Home() {
   return (
     <div className='position-relative'>
@@ -16,6 +17,7 @@ export default function Home() {
       <AboutUs />
       {/* <Services />
       <Models /> */}
+     
       <GalleryHome />
       <Mentor />
       <Testimonial />

@@ -8,7 +8,7 @@ export default function Footer() {
         { title: "Terms & Conditions", href: "/utilities/termsConditions" },
         { title: "Refund Policy", href: "/utilities/refund" },
         { title: "About Us", href: "/features/about" },
-        { title: "Contact Us", href: "/features/contact" }
+        { title: "Contact Us", href: "/contact" }
     ]
     return (
         <div data-aos="fade-up"  data-aos-anchor-placement="center-bottom" >

@@ -29,7 +29,7 @@ export default function Testimonial() {
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
-
+        
         responsive: [
             {
                 breakpoint: 600,
@@ -55,11 +55,11 @@ export default function Testimonial() {
                     <div className="d-flex justify-content-between flex-wrap gap-5">
                         <div className="col-md-2 col-12 text-center d-flex justify-content-center align-items-center">
                             <div className="">
-                                <h3 className='text-secondary'>Testimonial</h3>
+                                <h3 className='text-dark'>Testimonial</h3>
                                 <h6 className='text-uppercase'>What out customer says</h6>
                                 <div className=" mt-3 d-flex gap-3 justify-content-center">
-                                    <button onClick={() => slider.current.slickPrev()} className='testimonialNav rounded-circle border-0'> <HiOutlineChevronLeft className='m-2' /></button>
-                                    <button onClick={() => slider.current.slickNext()} className='testimonialNav rounded-circle  border-0'> <HiOutlineChevronRight className='m-2' /></button>
+                                    <button onClick={() => slider.current.slickPrev()} className='testimonialNav rounded-circle bg-light border-0'> <HiOutlineChevronLeft className='m-2' /></button>
+                                    <button onClick={() => slider.current.slickNext()} className='testimonialNav rounded-circle bg-light  border-0'> <HiOutlineChevronRight className='m-2' /></button>
                                 </div>
                             </div>
                         </div>

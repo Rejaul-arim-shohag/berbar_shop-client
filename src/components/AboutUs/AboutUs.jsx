@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import HomePageLayout from '../Layout/HomePageLayout'
 import AllMentor from "../Mentor/AllMentor"
+import Stats from "../Stats/Stats"
 import Testimonial from "../Testimonial/Testimonial"
 import "./AboutUs.scss"
 export default function AboutUs({ routingAbout }) {
@@ -59,6 +60,8 @@ export default function AboutUs({ routingAbout }) {
                         }
                     </Row>
                 </Container>
+
+                <Stats/>
 
             </HomePageLayout>
 
