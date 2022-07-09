@@ -25,7 +25,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="booking/:styleId" element={<BookingPage />} />
+            <Route path="booking" element={<BookingPage />} />
             
             <Route path='features' element={<Features />}>
               <Route path='service' element={<AllServices />} />

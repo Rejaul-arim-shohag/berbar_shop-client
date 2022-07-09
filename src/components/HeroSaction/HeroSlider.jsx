@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Slider from 'react-slick'
 import { Row } from 'react-bootstrap'
 import "./HeroSlider.scss"
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 export default function HeroSlider() {
     const [heroSlider, setHeroSlider] = useState([]);
     const slider = useRef()
@@ -28,7 +29,7 @@ export default function HeroSlider() {
         slidesToScroll: 1,
         initialSlide: 1,
         autoplay: true,
-        speed: 2000,
+        speed: 500,
         autoplaySpeed: 5000,
 
     };
@@ -42,7 +43,7 @@ export default function HeroSlider() {
             <div className="barber-title text-light d-flex justify-content-center py-5 align-items-start flex-column gap-4">
                 <h2 className='display-md-5 w-75 text-uppercase fw-bold'>HairStyle is a  Must try Fashion  for all Occasion</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed </p>
-                <Link className='appointment-btn btn btn-outline-light rounded-pill py-2 px-4 fw-bold text-light' to={`/booking/1`}>Set an appointment</Link>
+                {/* <Link className='appointment-btn btn btn-outline-light rounded-pill py-2 px-4 fw-bold text-light' to={`/booking/1`}>Set an appointment</Link> */}
 
             </div>
             <div className="slider_card">
@@ -63,8 +64,12 @@ export default function HeroSlider() {
                 </Slider>
 
 
-
+                <div className=" mt-3 d-flex gap-3 justify-content-center">
+                    <button onClick={() => slider.current.slickPrev()} className='testimonialNav rounded-pill px-1 py-1 fw-bold bg-primary text-light border-0'> <HiOutlineChevronLeft className='m-2' /></button>
+                    <button onClick={() => slider.current.slickNext()} className='testimonialNav rounded-pill px-1 py-1 fw-bold  bg-primary text-light border-0'> <HiOutlineChevronRight className='m-2' /></button>
+                </div>
             </div>
+
 
         </Row>
     )

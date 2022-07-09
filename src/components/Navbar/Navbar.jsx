@@ -3,14 +3,14 @@ import { useState } from 'react'
 import { Offcanvas } from 'react-bootstrap'
 import { AiFillContacts, AiFillSetting, AiOutlineControl, AiOutlineHome, AiOutlineRight } from 'react-icons/ai'
 import { GiHamburgerMenu, GiMoneyStack } from 'react-icons/gi'
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import useScrollPosition from '../../hooks/useScrollPosition'
 import "./Navbar.scss"
 export default function Navbar() {
     const [show, setShow] = useState(false);
     const [isScroll, setIsScroll] = useState(false);
     const scrollPosition = useScrollPosition()
-
+    const navigate = useNavigate();
 
 
     const handleClose = () => setShow(false);
@@ -60,7 +60,8 @@ export default function Navbar() {
                         </ul>
                     </div>
                     <div className="d-none d-md-block">
-                        <button className='navBtn rounded-pill fw-bold py-2 px-5'>Sign Up</button>
+                        <button className='navBtn rounded-pill fw-bold py-2 px-5' onClick={()=>navigate('/booking')}>BOOK ONLINE</button>
+                        {/* <button className='navBtn rounded-pill fw-bold py-2 px-5'>Sign Up</button> */}
                     </div>
                     {/* <div className="">
                             <form className="d-flex d-md-none mt-3">
