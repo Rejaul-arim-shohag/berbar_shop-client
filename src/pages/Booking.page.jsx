@@ -20,7 +20,6 @@ export default function BookingPage() {
         <AppointmentForm />
       </HomePageLayout>
       <Footer />
-
     </>
   )
 }

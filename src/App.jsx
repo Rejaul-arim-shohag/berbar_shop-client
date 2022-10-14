@@ -12,6 +12,7 @@ import PrivacyPolicy from "./components/UtilitiComponent/PrivacyPolicy";
 import RefundPolicy from "./components/UtilitiComponent/RefundPolicy";
 import TermsConditions from "./components/UtilitiComponent/TermsConditions";
 import BookingPage from "./pages/Booking.page";
+import BookingByUserPage from "./pages/BookingByUserPage";
 import Features from './pages/Features.page';
 import Home from './pages/Home.page';
 import NotFound from './pages/NotFound.page';
@@ -36,6 +37,7 @@ function App() {
 
             <Route path='gallery' element={<GallerySection />} />
             <Route path='contact' element={<ContactSection />} />
+            <Route path='booking/:slotId' element={<BookingByUserPage />} />
 
             <Route path='utilities' element={<UtilitiesPage />} >
               <Route path='privacy' element={<PrivacyPolicy />} />

@@ -6,33 +6,79 @@ import axios from 'axios'
 import Footer from '../Footer/Footer';
 import StarRatings from 'react-star-ratings';
 import { useQuery } from 'react-query';
-import "./services.scss";
+import "./Services.scss";
 import { Link } from "react-router-dom"
+import { fromDataPost } from '../../APIRequest/ApiRequest';
+
+
 export default function AllServices() {
     const [services, setServices] = useState([]);
-    const { isLoading, error, data, isFetching } = useQuery("services", () =>
-        axios.get(
-            "https://testimonialapi.toolcarton.com/api"
-        ).then(({ data }) => data)
-    );
 
-    useEffect(() => {
-        setServices(data)
-    }, [data])
 
-    if (services?.length === 0) {
-        return <Loader isLoading={true} />
+
+    const baseUrl = "http://localhost:5000/api/v1";
+    const [image, setImage] = useState([]);
+    const [userName, setUserName] = useState("")
+    const inputHandle = (e) => {
+        if (e.target.files.length != 0) {
+            setImage(e.target.files[0])
+        }
     }
+    const handleNameChange = (e) => {
+        setUserName(e.target.value)
+    }
+
+    const handlePostData = () => {
+        // fromDataPost(image, userName)
+        const url = baseUrl + "/readSlots";
+        const formData = new FormData()
+        formData.append("image", image)
+        console.log(formData)
+        axios.post(url, formData)
+            .then((res) => {
+                if (res.status === 200) {
+                    return res.data;
+                }
+                else {
+                    return false;
+                }
+            }).catch((err) => {
+                console.log(err)
+            })
+
+
+    }
+    // const { isLoading, error, data, isFetching } = useQuery("services", () =>
+    //     axios.get(
+    //         "https://testimonialapi.toolcarton.com/api"
+    //     ).then(({ data }) => data)
+    // );
+
+    // useEffect(() => {
+    //     setServices(data)
+    // }, [data])
+
+    // if (services?.length === 0) {
+    //     return <Loader isLoading={true} />
+    // }
+
+
     return (
         <>
-            <HomePageLayout title="OUR TOP RATED SERVICES" des="We are the best in our field">
+
+            <div className="fileUpload">
+                <input onChange={inputHandle} type="file" />
+                <input onChange={handleNameChange} type="text" />
+                <button onClick={handlePostData} className="btn btn-primary">Submit</button>
+            </div>
+            {/* <HomePageLayout title="OUR TOP RATED SERVICES" des="We are the best in our field">
                 <div className="services">
                     <div data-aos="fade-up">
                         <Row xs={2} md={3} className="g-md-4 g-2">
                             {services?.map((_, idx) => (
                                 <Col key={idx} className="p-3">
                                     <Card>
-                                        <Link class="d-block serviceCard"  to={`/booking/${_.id}`}>
+                                        <Link class="d-block serviceCard" to={`/booking/${_.id}`}>
                                             <div
                                                 class="position-relative  h-100  bg-light border-4 border-dark rounded"
                                             >
@@ -57,16 +103,16 @@ export default function AllServices() {
                                             </div>
                                         </Link>
                                     </Card>
-                                </Col> 
+                                </Col>
                             ))}
                         </Row>
+
+                        
+
                     </div>
 
-                </div>
-
             </HomePageLayout>
-
-            <Footer />
+            <Footer /> */}
         </>
     )
 }

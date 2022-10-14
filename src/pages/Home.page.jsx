@@ -7,22 +7,23 @@ import BookNowBadge from '../components/BookNowBadge/BookNowBadge'
 import GalleryHome from '../components/Gellary/Gellary.home'
 import Testimonial from '../components/Testimonial/Testimonial'
 import Stats from '../components/Stats/Stats'
+import Products from '../components/Products/Products'
 export default function Home() {
   return (
     <div className='position-relative'>
 
-      <BookNowBadge home/>
+      <BookNowBadge home />
       <HeroSection />
-
+      <Products />
       <AboutUs />
       {/* <Services />
       <Models /> */}
-     
+
       <GalleryHome />
       <Mentor />
       <Testimonial />
       <Footer />
-     
+
 
 
 
